@@ -1,0 +1,139 @@
+site_name: 52Pi Docs 
+nav:
+  - HOME: 'index.md'
+  - EP-0243 ESPHome IoT Node: 
+    - what's in the kit: 'md/EP-0243/esphome_iot_node.md'
+    - Getting Start: 'md/EP-0243/getting_start.md'
+    - Chapter 1 Install Docker: 'md/EP-0243/01.install_docker.md'
+    - Chapter 2 Setup MQTT container[optional] : 'md/EP-0243/02.setup_mqtt_container.md'
+    - Chapter 3 Setup HomeAssistant container: 'md/EP-0243/03.setup_ha_container.md'
+    - Chapter 4 Setup ESPHome container: 'md/EP-0243/04.setup_esphome_container.md'
+    - Chapter 5 Add ESPHome Intergration: 'md/EP-0243/05.add_esphome_intergration.md'
+    - Chapter 6 Upload Firmware: 'md/EP-0243/06.upload_firmware.md'
+    - Chapter 7 Blink LED: 'md/EP-0243/07.blink_led.md'
+    - Chapter 8 Read Temperature from NTC: 'md/EP-0243/08.read_temperature_from_ntc.md'
+    - Chapter 9 Read humidity from soil moisture: 'md/EP-0243/09.read_humidity_from_soil_moisture.md'
+    - Chapter 10 Display Image on 1.3-inch IPS display: 'md/EP-0243/10.display_configure.md'
+    - Chapter 11 Grab image from camera: 'md/EP-0243/11.camera.md'
+    - Chapter 12 Read signal from IR receiver: 'md/EP-0243/12.ir_receiver.md'
+    - Chapter 13 ESPHome Configuration: 'md/EP-0243/13.esphome_configure.md'
+    - Chapter 14 Intergration all in one: 'md/EP-0243/14.all_in_one.md'
+
+  - KZ-0069 Plant Watering Kit:
+    - What's in the kit: 'md/kz-0069/package_includes.md'
+    - Getting Start: 'md/kz-0069/getting_start.md'
+    - Basic Usage 1: 'md/kz-0069/basic_usage_1.md'
+    - Basic Usage 2: 'md/kz-0069/basic_usage_2.md'
+    - Basic Usage 3: 'md/kz-0069/basic_usage_3.md'
+    - Basic Usage 4: 'md/kz-0069/basic_usage_4.md'
+    - Basic Usage 5: 'md/kz-0069/basic_usage_5.md'
+    - Basic Usage 6: 'md/kz-0069/basic_usage_6.md'
+    - Networking: 'md/kz-0069/network_configuration.md'
+    - MQTT broker: 'md/kz-0069/mosquitto_mqtt_broker.md'
+    - HomeAssistant: 'md/kz-0069/home_assistant.md'
+
+  - KZ-0068 Universal Sensor Kit: 
+    - What's in the kit: 'md/kz-0068/whatinkit.md'
+    - Preparation: 'md/kz-0068/preparation.md'
+    - Getting Start : 'md/kz-0068/getting-start.md'
+    - Project 1: 'md/kz-0068/arduino/p1.md'
+    - Project 2: 'md/kz-0068/arduino/p2.md'
+    - Project 3: 'md/kz-0068/arduino/p3.md'
+    - Project 4: 'md/kz-0068/arduino/p4.md'
+    - Project 5: 'md/kz-0068/arduino/p5.md'
+    - Project 6: 'md/kz-0068/arduino/p6.md'
+    - Project 7: 'md/kz-0068/arduino/p7.md'
+    - Project 8: 'md/kz-0068/arduino/p8.md'
+    - Project 9: 'md/kz-0068/arduino/p9.md'
+    - Project 10: 'md/kz-0068/arduino/p10.md'
+  - Project with ESP32:
+    - Getting Start: 'md/kz-0068/esp32/getting-start.md'
+    - Project 1: 'md/kz-0068/esp32/getting-start.md'
+    - Project 2: 'md/kz-0068/esp32/blink.md'
+    - Project 3: 'md/kz-0068/esp32/dht11.md'
+    - Project 4: 'md/kz-0068/esp32/bmp280.md'
+    - Project 5: 'md/kz-0068/esp32/mpu6050.md'
+    - Project 6: 'md/kz-0068/esp32/joystick.md'
+    - Project 7: 'md/kz-0068/esp32/ultrasonic-sensor.md'
+    - Project 8: 'md/kz-0068/esp32/oled-display.md'
+    - Project 9: 'md/kz-0068/esp32/buzzer.md'
+    - Project 10: 'md/kz-0068/esp32/stepper-motor.md'
+    - Project 11: 'md/kz-0068/esp32/slide-potentiometer.md'
+    - Project 12: 'md/kz-0068/esp32/9g-servo.md'
+    - Project 13: 'md/kz-0068/esp32/soil-moisture-sensor.md'
+    - Project 14: 'md/kz-0068/esp32/raindrop-sensor.md'
+    - Project 15: 'md/kz-0068/esp32/light-sensor.md'
+    - Project 16: 'md/kz-0068/esp32/ads1115-adc-module.md'
+    - Project 17: 'md/kz-0068/esp32/infrared-proximity-sensor.md'
+    - Project 18: 'md/kz-0068/esp32/capacitive-touch-button.md'
+    - Project 19: 'md/kz-0068/esp32/can-bus-module.md'
+    - Project 20: 'md/kz-0068/esp32/potentiometer.md'
+    - Project 21: 'md/kz-0068/esp32/infrared-receiver-module.md'
+    - Project 22: 'md/kz-0068/esp32/lcd1602-display.md'
+    - Project 23: 'md/kz-0068/esp32/mp3-module.md'
+    - Project 24: 'md/kz-0068/esp32/3w-dac-amplifier-module.md'
+    - Project 25: 'md/kz-0068/esp32/rotary-encoder.md'
+    - Project 26: 'md/kz-0068/esp32/1.3-inch-ips-240x240-color-display.md'
+    - Project 27: 'md/kz-0068/esp32/single-relay-module.md'
+    - Project 28: 'md/kz-0068/esp32/tilt-sensor.md'
+    - Project 29: 'md/kz-0068/esp32/sound-sensor.md'
+  - Project with Raspberry Pi Pico:
+    - Getting Start: 'md/kz-0068/pico/getting_start.md'
+    - Proejct 1 Blink LED: 'md/kz-0068/pico/project_1.md'
+    - Proejct 2 OLED basic: 'md/kz-0068/pico/project_2.md'
+    - Proejct 3 OLED Alien Invader: 'md/kz-0068/pico/project_3.md'
+    - Proejct 4 OLED MPU6050: 'md/kz-0068/pico/project_4.md'
+    - Proejct 5 MPU6050 Control LED: 'md/kz-0068/pico/project_5.md'
+    - Proejct 6 Vibration detection: 'md/kz-0068/pico/project_6.md'
+    - Proejct 7 LCD1602 Display Temperature of CPU: 'md/kz-0068/pico/project_7.md'
+    - Proejct 8 Rain Detection: 'md/kz-0068/pico/project_8.md'
+    - Proejct 9 Blink RGB Light Ring: 'md/kz-0068/pico/project_9.md'
+    - Proejct 10 Light Detection: 'md/kz-0068/pico/project_10.md'
+    - Proejct 11 Tilt Detection: 'md/kz-0068/pico/project_11.md'
+    - Proejct 12 Motion Detection: 'md/kz-0068/pico/project_12.md'
+    - Proejct 13 Sound Detection: 'md/kz-0068/pico/project_13.md'
+    - Proejct 14 Temperature and Humidity Detection: 'md/kz-0068/pico/project_14.md'
+    - Proejct 15 Single Relay Control: 'md/kz-0068/pico/project_15.md'
+    - Proejct 16 Distance Detection: 'md/kz-0068/pico/project_16.md'
+    - Proejct 17 Stepper Motor: 'md/kz-0068/pico/project_17.md'
+    - Proejct 18 BMP280: 'md/kz-0068/pico/project_18.md'
+    - Proejct 19 Servo Control: 'md/kz-0068/pico/project_19.md'
+    - Proejct 20 Rotary Encoder: 'md/kz-0068/pico/project_20.md'
+    - Proejct 21 PS2 Joystick: 'md/kz-0068/pico/project_21.md'
+    - Proejct 22 PS2 Joystick OLED: 'md/kz-0068/pico/project_22.md'
+    - Proejct 23 LCD1602 BMP280: 'md/kz-0068/pico/project_23.md'
+    - Proejct 24 LCD1602 MPU6050: 'md/kz-0068/pico/project_24.md'
+
+  - KZ-0073 Education Starter Kit: 
+    - What's in the kit: 'md/kz-0073/whatinkit.md'
+    - Preparation: 'md/kz-0073/preparation.md'
+    - Getting Start : 'md/kz-0073/getting-start.md'
+    - Project 1: 'md/kz-0073/arduino/p1.md'
+    - Project 2: 'md/kz-0073/arduino/p2.md'
+    - Project 3: 'md/kz-0073/arduino/p3.md'
+    - Project 4: 'md/kz-0073/arduino/p4.md'
+    - Project 5: 'md/kz-0073/arduino/p5.md'
+    - Project 6: 'md/kz-0073/arduino/p6.md'
+    - Project 7: 'md/kz-0073/arduino/p7.md'
+    - Project 8: 'md/kz-0073/arduino/p8.md'
+    - Project 9: 'md/kz-0073/arduino/p9.md'
+    - Project 10: 'md/kz-0073/arduino/p10.md'
+  - Contact: 
+    - E-Mail: 'md/contact.md'
+
+theme: readthedocs
+
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+
+plugins:
+  - mkdocs-video
