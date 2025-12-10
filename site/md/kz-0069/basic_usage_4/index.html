@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Basic Usage 4 - 52Pi Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Basic Usage 4";
+        var mkdocs_page_input_path = "md/kz-0069/basic_usage_4.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 52Pi Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">HOME</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0086</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0086/diykitforarduinonanor4/">DIY Beginner Kit Compatible with Arduino Nano R4(Headers)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0083</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/getting-start/">Raspberry Pi Pico 2 WH Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project9/">Project 9</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0084</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0084/projects/">Ultimate Starter Kit for Raspberry Pi Pico 2 WH</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0054</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0054/whatinkit/">Cloud Ready Starter Kit for Arduino UNO R4 WiFi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0069</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../package_includes/">Plant Watering Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_1/">Basic Usage 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_2/">Basic Usage 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_3/">Basic Usage 3</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Basic Usage 4</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ir-contorler-control-leds">IR contorler control LEDs</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hardware-overview">Hardware Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ir-receiver-position-on-board">IR Receiver position on board</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pinout-chart">Pinout Chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#circuit-diagram">Circuit Diagram</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-the-shield">Connecting the Shield</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#programming">Programming</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-irremote-library">Install IRRemote library</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#import-header-files">Import header files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#define-ir-receiver-and-leds-pin-number">Define IR receiver and LEDs Pin number</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initializing-pin-mode">Initializing Pin Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#modify-loop-section">Modify loop section</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#demo-code-examples">Demo code examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#upload-the-sketch-to-arduino-uno-r4-wifi-board">Upload the sketch to Arduino UNO R4 WiFi board.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#open-serial-monitor-and-observe-it">Open serial monitor and observe it.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo-code-sketch-download">Demo Code Sketch Download</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo-video">Demo Video</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#finally">Finally</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_5/">Basic Usage 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_6/">Basic Usage 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../network_configuration/">Networking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mosquitto_mqtt_broker/">MQTT broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../home_assistant/">HomeAssistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arduino_cloud/">Arduino Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0073</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/whatinkit/">Education Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0077</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0077/student_starter_kit/">Student Starter Kit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0068</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/whatinkit/">Universal Sensor Kit(TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/">E-Mail</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">52Pi Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>KZ-0069 &raquo;</li>
+      <li>Basic Usage 4</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="basic-usage-4">Basic Usage 4</h1>
+<h2 id="ir-contorler-control-leds">IR contorler control LEDs</h2>
+<p>Next, we will use the onboard IR receiver to receive signals from the infrared remote control to control the LED lights.</p>
+<p>OK, let’s begin the basic learning. </p>
+<p>In this experiment, we are going to control the two LEDs on the plant watering hat board by using IR remote controller. </p>
+<h2 id="hardware-overview">Hardware Overview</h2>
+<p>The shield provides the following interfaces:</p>
+<ul>
+<li>3 x Soil Moisture Sensors (Analog Inputs A0, A1, A2)</li>
+<li>3 x NTC Temperature Sensors (Analog Inputs A4, A5, A6)</li>
+<li>3 x 3.3V Relay Modules (Digital Outputs 2, 3, 4)</li>
+<li>3 x Mini Water Pumps</li>
+<li>1 x 1.3-inch IPS RGB TFT Screen (ST7789 Controller)</li>
+<li>1 x IR receiver </li>
+<li>1 x IR remote controller
+<font color="red">NOTE: you may need to purchase battery for the IR remote controller. </font></li>
+</ul>
+<h2 id="ir-receiver-position-on-board">IR Receiver position on board</h2>
+<ul>
+<li>IR receiver </li>
+</ul>
+<p><img alt="IR_receiver" src="../imgs/ir-receiver.jpg"> </p>
+<ul>
+<li>IR remote controller</li>
+</ul>
+<p><img alt="IR_remote_controller" src="../imgs/IR-Remote-controller.jpg"> </p>
+<h2 id="pinout-chart">Pinout Chart</h2>
+<ul>
+<li>Details of the expansion board.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Plant Watering Kit Hat Board</th>
+<th align="center">Arduino UNO R4 WiFi Board</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><font color="Green">HUMI3 </font></td>
+<td align="center"><font color="green">A0</font></td>
+</tr>
+<tr>
+<td align="center"><font color="Green">HUMI2 </font></td>
+<td align="center"><font color="green">A1</font></td>
+</tr>
+<tr>
+<td align="center"><font color="Green">HUMI1 </font></td>
+<td align="center"><font color="green">A2</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP3</font></td>
+<td align="center"><font color="BROWN">A3</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP2</font></td>
+<td align="center"><font color="BROWN">A4</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP1 </font></td>
+<td align="center"><font color="BROWN">A5</font></td>
+</tr>
+<tr>
+<td align="center"><font color="red">IR_RSV</font></td>
+<td align="center"><font color="red">D5</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 1</font></td>
+<td align="center"><font color="blue">D2</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 2</font></td>
+<td align="center"><font color="blue">D3</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 3</font></td>
+<td align="center"><font color="blue">D4</font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_SCLK </font></td>
+<td align="center"><font color="pink">D13 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_MOSI</font></td>
+<td align="center"><font color="pink">D11 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_CS </font></td>
+<td align="center"><font color="pink">D10 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_DC </font></td>
+<td align="center"><font color="pink">D9 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_RST </font></td>
+<td align="center"><font color="pink">D8 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="red"> RX</font></td>
+<td align="center"><font color="red">TX-&gt;1 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="red"> TX</font></td>
+<td align="center"><font color="red">RX&lt;-0 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="green">Green LED </font></td>
+<td align="center"><font color="green">D6</font></td>
+</tr>
+<tr>
+<td align="center"><font color="red">Red LED</font></td>
+<td align="center"><font color="red">D7</font></td>
+</tr>
+</tbody>
+</table>
+<h2 id="circuit-diagram">Circuit Diagram</h2>
+<p><img alt="circuit Diagram" src="../imgs/plant_watering_kit_board_diagram.png"></p>
+<h2 id="connecting-the-shield">Connecting the Shield</h2>
+<ul>
+<li>place the arduino uno r4 on a flat surface.</li>
+<li>align the shield with the headers of the arduino board and gently press it down until it clicks into place.</li>
+<li>plug the plant watering hat board on top of arduino uno r4 on gpio pins. </li>
+</ul>
+<h2 id="programming">Programming</h2>
+<p>Open arduino IDE and create a new sketch by clicking <code>file</code>-&gt; <code>New Sketch</code> </p>
+<p><img alt="new sketch" src="../imgs/pwk01.png"></p>
+<h2 id="install-irremote-library">Install IRRemote library</h2>
+<ul>
+<li>Click <code>book</code> icon to open library manager and then input <code>IRremote</code>, install
+IRremote library as following figure.</li>
+</ul>
+<p><img alt="install library" src="../imgs/install_ir_remote_library.png"></p>
+<h3 id="import-header-files">Import header files</h3>
+<p></p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;IRremote.h&gt;</span><span class="c1">     // IR remote header file</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"PinDefinitionsAndMore.h"</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;IRremote.hpp&gt;</span><span class="c1">  // include the library</span>
+</span></code></pre></div>
+NOTE: 
+open a new tab on Arduino IDE by click three dots on right corner. 
+<p><img alt="add_new_tab1" src="../imgs/add_new_tab.png"></p>
+<p>next to create a new tab. </p>
+<p><img alt="add_new_tab2" src="../imgs/add_new_tab_2.png"></p>
+<p><img alt="add_new_tab3" src="../imgs/add_new_tab_3.png"></p>
+<p><img alt="add_new_tab4" src="../imgs/add_new_tab_4.png"></p>
+<p>and then copy following code and paste into it. </p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/*</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cm"> *  PinDefinitionsAndMore.h</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cm"> *</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm"> *  Contains pin definitions for IRremote examples for various platforms</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="cm"> *  as well as definitions for feedback LED and tone() and includes</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="cm"> *</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="cm"> *  Copyright (C) 2021-2023  Armin Joachimsmeyer</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="cm"> *  armin.joachimsmeyer@gmail.com</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="cm"> *</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="cm"> *  This file is part of IRremote https://github.com/Arduino-IRremote/Arduino-IRremote.</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="cm"> *</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="cm"> *  Arduino-IRremote is free software: you can redistribute it and/or modify</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="cm"> *  it under the terms of the GNU General Public License as published by</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="cm"> *  the Free Software Foundation, either version 3 of the License, or</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="cm"> *  (at your option) any later version.</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="cm"> *</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="cm"> *  This program is distributed in the hope that it will be useful,</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="cm"> *  but WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="cm"> *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="cm"> *  See the GNU General Public License for more details.</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="cm"> *</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="cm"> *  You should have received a copy of the GNU General Public License</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="cm"> *  along with this program. If not, see &lt;http://www.gnu.org/licenses/gpl.html&gt;.</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="cm"> *</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="cm"> */</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="cm">/*</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="cm"> * Pin mapping table for different platforms</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="cm"> *</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="cm"> * Platform     IR input    IR output   Tone      Core/Pin schema</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="cm"> * --------------------------------------------------------------</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="cm"> * DEFAULT/AVR  2           3           4         Arduino</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="cm"> * ATtinyX5     0|PB0       4|PB4       3|PB3     ATTinyCore</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="cm"> * ATtiny167    3|PA3       2|PA2       7|PA7     ATTinyCore</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="cm"> * ATtiny167    9|PA3       8|PA2       5|PA7     Digispark original core</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="cm"> * ATtiny84      |PB2        |PA4        |PA3     ATTinyCore</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="cm"> * ATtiny88     3|PD3       4|PD4       9|PB1     ATTinyCore</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="cm"> * ATtiny3217  18|PA1      19|PA2      20|PA3     MegaTinyCore</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="cm"> * ATtiny1604   2           3|PA5       %</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="cm"> * ATtiny816   14|PA1      16|PA3       1|PA5     MegaTinyCore</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="cm"> * ATtiny1614   8|PA1      10|PA3       1|PA5     MegaTinyCore</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="cm"> * SAMD21       3           4           5</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="cm"> * ESP8266      14|D5       12|D6       %</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="cm"> * ESP32        15          4          27</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="cm"> * ESP32-C3     6           7          10</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="cm"> * BluePill     PA6         PA7       PA3</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="cm"> * APOLLO3      11          12          5</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="cm"> * RP2040       3|GPIO15    4|GPIO16    5|GPIO17</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="cm"> */</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="c1">//#define _IR_MEASURE_TIMING // For debugging purposes.</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="cp">#if defined(__AVR__)</span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="cp">#if defined(__AVR_ATtiny25__) || defined(__AVR_ATtiny45__) || defined(__AVR_ATtiny85__) </span><span class="c1">// Digispark board. For use with ATTinyCore.</span>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"ATtinySerialOut.hpp"</span><span class="c1"> // TX is at pin 2 - Available as Arduino library "ATtinySerialOut". Saves 700 bytes program memory and 70 bytes RAM for ATtinyCore.</span>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="cp">#define IR_RECEIVE_PIN  PIN_PB0</span>
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="cp">#define IR_SEND_PIN     PIN_PB4 </span><span class="c1">// Pin 2 is serial output with ATtinySerialOut. Pin 1 is internal LED and Pin3 is USB+ with pullup on Digispark board.</span>
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="cp">#define TONE_PIN        PIN_PB3</span>
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="cp">#define _IR_TIMING_TEST_PIN PIN_PB3</span>
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="cp">#  elif defined(__AVR_ATtiny87__) || defined(__AVR_ATtiny167__) </span><span class="c1">// Digispark pro board</span>
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"ATtinySerialOut.hpp"</span><span class="c1"> // Available as Arduino library "ATtinySerialOut"</span>
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="c1">// For ATtiny167 Pins PB6 and PA3 are usable as interrupt source.</span>
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="cp">#  if defined(ARDUINO_AVR_DIGISPARKPRO)</span>
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="c1">// For use with Digispark original core</span>
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="cp">#define IR_RECEIVE_PIN   9 </span><span class="c1">// PA3 - on Digispark board labeled as pin 9</span>
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="c1">//#define IR_RECEIVE_PIN  14 // PB6 / INT0 is connected to USB+ on DigisparkPro boards</span>
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="cp">#define IR_SEND_PIN      8 </span><span class="c1">// PA2 - on Digispark board labeled as pin 8</span>
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="cp">#define TONE_PIN         5 </span><span class="c1">// PA7 - on Digispark board labeled as pin 5</span>
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="cp">#define _IR_TIMING_TEST_PIN 10 </span><span class="c1">// PA4</span>
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="cp">#  else</span>
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="c1">// For use with ATTinyCore</span>
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="cp">#define IR_RECEIVE_PIN  PIN_PA3 </span><span class="c1">// On Digispark board labeled as pin 9 - INT0 is connected to USB+ on DigisparkPro boards</span>
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="cp">#define IR_SEND_PIN     PIN_PA2 </span><span class="c1">// On Digispark board labeled as pin 8</span>
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a><span class="cp">#define TONE_PIN        PIN_PA7 </span><span class="c1">// On Digispark board labeled as pin 5</span>
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="cp">#  endif</span>
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a><span class="cp">#  elif defined(__AVR_ATtiny84__) </span><span class="c1">// For use with ATTinyCore</span>
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"ATtinySerialOut.hpp"</span><span class="c1"> // Available as Arduino library "ATtinySerialOut". Saves 128 bytes program memory.</span>
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a><span class="cp">#define IR_RECEIVE_PIN   PIN_PB2 </span><span class="c1">// INT0</span>
+</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a><span class="cp">#define IR_SEND_PIN      PIN_PA4</span>
+</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a><span class="cp">#define TONE_PIN         PIN_PA3</span>
+</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a><span class="cp">#define _IR_TIMING_TEST_PIN PIN_PA5</span>
+</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>
+</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a><span class="cp">#  elif defined(__AVR_ATtiny88__) </span><span class="c1">// MH-ET Tiny88 board. For use with ATTinyCore.</span>
+</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"ATtinySerialOut.hpp"</span><span class="c1"> // Available as Arduino library "ATtinySerialOut". Saves 128 bytes program memory.</span>
+</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a><span class="c1">// Pin 6 is TX, pin 7 is RX</span>
+</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a><span class="cp">#define IR_RECEIVE_PIN   PIN_PD3 </span><span class="c1">// 3 - INT1</span>
+</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a><span class="cp">#define IR_SEND_PIN      PIN_PD4 </span><span class="c1">// 4</span>
+</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a><span class="cp">#define TONE_PIN         PIN_PB1 </span><span class="c1">// 9</span>
+</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a><span class="cp">#define _IR_TIMING_TEST_PIN PIN_PB0 </span><span class="c1">// 8</span>
+</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>
+</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a><span class="cp">#  elif defined(__AVR_ATtiny1616__)  || defined(__AVR_ATtiny3216__) || defined(__AVR_ATtiny3217__) </span><span class="c1">// For use with megaTinyCore</span>
+</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a><span class="c1">// Tiny Core Dev board</span>
+</span><span id="__span-1-94"><a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a><span class="c1">// https://www.tindie.com/products/xkimi/tiny-core-16-dev-board-attiny1616/ - Out of Stock</span>
+</span><span id="__span-1-95"><a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a><span class="c1">// https://www.tindie.com/products/xkimi/tiny-core-32-dev-board-attiny3217/ - Out of Stock</span>
+</span><span id="__span-1-96"><a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a><span class="cp">#define IR_RECEIVE_PIN   PIN_PA1 </span><span class="c1">// use 18 instead of PIN_PA1 for TinyCore32</span>
+</span><span id="__span-1-97"><a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a><span class="cp">#define IR_SEND_PIN      PIN_PA2 </span><span class="c1">// 19</span>
+</span><span id="__span-1-98"><a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a><span class="cp">#define TONE_PIN         PIN_PA3 </span><span class="c1">// 20</span>
+</span><span id="__span-1-99"><a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a><span class="cp">#define APPLICATION_PIN  PIN_PA0 </span><span class="c1">// 0</span>
+</span><span id="__span-1-100"><a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a><span class="cp">#undef LED_BUILTIN               </span><span class="c1">// No LED available on the TinyCore 32 board, take the one on the programming board which is connected to the DAC output</span>
+</span><span id="__span-1-101"><a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a><span class="cp">#define LED_BUILTIN      PIN_PA6 </span><span class="c1">// use 2 instead of PIN_PA6 for TinyCore32</span>
+</span><span id="__span-1-102"><a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a>
+</span><span id="__span-1-103"><a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a><span class="cp">#  elif defined(__AVR_ATtiny816__) </span><span class="c1">// For use with megaTinyCore</span>
+</span><span id="__span-1-104"><a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a><span class="cp">#define IR_RECEIVE_PIN  PIN_PA1 </span><span class="c1">// 14</span>
+</span><span id="__span-1-105"><a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a><span class="cp">#define IR_SEND_PIN     PIN_PA1 </span><span class="c1">// 16</span>
+</span><span id="__span-1-106"><a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a><span class="cp">#define TONE_PIN        PIN_PA5 </span><span class="c1">// 1</span>
+</span><span id="__span-1-107"><a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a><span class="cp">#define APPLICATION_PIN PIN_PA4 </span><span class="c1">// 0</span>
+</span><span id="__span-1-108"><a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a><span class="cp">#undef LED_BUILTIN              </span><span class="c1">// No LED available, take the one which is connected to the DAC output</span>
+</span><span id="__span-1-109"><a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a><span class="cp">#define LED_BUILTIN     PIN_PB5 </span><span class="c1">// 4</span>
+</span><span id="__span-1-110"><a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a>
+</span><span id="__span-1-111"><a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a><span class="cp">#  elif defined(__AVR_ATtiny1614__) </span><span class="c1">// For use with megaTinyCore</span>
+</span><span id="__span-1-112"><a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a><span class="cp">#define IR_RECEIVE_PIN   PIN_PA1 </span><span class="c1">// 8</span>
+</span><span id="__span-1-113"><a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a><span class="cp">#define IR_SEND_PIN      PIN_PA3 </span><span class="c1">// 10</span>
+</span><span id="__span-1-114"><a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a><span class="cp">#define TONE_PIN         PIN_PA5 </span><span class="c1">// 1</span>
+</span><span id="__span-1-115"><a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a><span class="cp">#define APPLICATION_PIN  PIN_PA4 </span><span class="c1">// 0</span>
+</span><span id="__span-1-116"><a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a>
+</span><span id="__span-1-117"><a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a><span class="cp">#  elif defined(__AVR_ATtiny1604__) </span><span class="c1">// For use with megaTinyCore</span>
+</span><span id="__span-1-118"><a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a><span class="cp">#define IR_RECEIVE_PIN   PIN_PA6 </span><span class="c1">// 2 - To be compatible with interrupt example, pin 2 is chosen here.</span>
+</span><span id="__span-1-119"><a id="__codelineno-1-119" name="__codelineno-1-119" href="#__codelineno-1-119"></a><span class="cp">#define IR_SEND_PIN      PIN_PA7 </span><span class="c1">// 3</span>
+</span><span id="__span-1-120"><a id="__codelineno-1-120" name="__codelineno-1-120" href="#__codelineno-1-120"></a><span class="cp">#define APPLICATION_PIN  PIN_PB2 </span><span class="c1">// 5</span>
+</span><span id="__span-1-121"><a id="__codelineno-1-121" name="__codelineno-1-121" href="#__codelineno-1-121"></a>
+</span><span id="__span-1-122"><a id="__codelineno-1-122" name="__codelineno-1-122" href="#__codelineno-1-122"></a><span class="cp">#define tone(...) void()      </span><span class="c1">// Define as void, since TCB0_INT_vect is also used by tone()</span>
+</span><span id="__span-1-123"><a id="__codelineno-1-123" name="__codelineno-1-123" href="#__codelineno-1-123"></a><span class="cp">#define noTone(a) void()</span>
+</span><span id="__span-1-124"><a id="__codelineno-1-124" name="__codelineno-1-124" href="#__codelineno-1-124"></a><span class="cp">#define TONE_PIN         42 </span><span class="c1">// Dummy for examples using it</span>
+</span><span id="__span-1-125"><a id="__codelineno-1-125" name="__codelineno-1-125" href="#__codelineno-1-125"></a>
+</span><span id="__span-1-126"><a id="__codelineno-1-126" name="__codelineno-1-126" href="#__codelineno-1-126"></a><span class="cp">#  elif defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__) \</span>
+</span><span id="__span-1-127"><a id="__codelineno-1-127" name="__codelineno-1-127" href="#__codelineno-1-127"></a><span class="cp">|| defined(__AVR_ATmega644__) || defined(__AVR_ATmega644P__) \</span>
+</span><span id="__span-1-128"><a id="__codelineno-1-128" name="__codelineno-1-128" href="#__codelineno-1-128"></a><span class="cp">|| defined(__AVR_ATmega324P__) || defined(__AVR_ATmega324A__) \</span>
+</span><span id="__span-1-129"><a id="__codelineno-1-129" name="__codelineno-1-129" href="#__codelineno-1-129"></a><span class="cp">|| defined(__AVR_ATmega324PA__) || defined(__AVR_ATmega164A__) \</span>
+</span><span id="__span-1-130"><a id="__codelineno-1-130" name="__codelineno-1-130" href="#__codelineno-1-130"></a><span class="cp">|| defined(__AVR_ATmega164P__) || defined(__AVR_ATmega32__) \</span>
+</span><span id="__span-1-131"><a id="__codelineno-1-131" name="__codelineno-1-131" href="#__codelineno-1-131"></a><span class="cp">|| defined(__AVR_ATmega16__) || defined(__AVR_ATmega8535__) \</span>
+</span><span id="__span-1-132"><a id="__codelineno-1-132" name="__codelineno-1-132" href="#__codelineno-1-132"></a><span class="cp">|| defined(__AVR_ATmega64__) || defined(__AVR_ATmega128__) \</span>
+</span><span id="__span-1-133"><a id="__codelineno-1-133" name="__codelineno-1-133" href="#__codelineno-1-133"></a><span class="cp">|| defined(__AVR_ATmega1281__) || defined(__AVR_ATmega2561__) \</span>
+</span><span id="__span-1-134"><a id="__codelineno-1-134" name="__codelineno-1-134" href="#__codelineno-1-134"></a><span class="cp">|| defined(__AVR_ATmega8515__) || defined(__AVR_ATmega162__)</span>
+</span><span id="__span-1-135"><a id="__codelineno-1-135" name="__codelineno-1-135" href="#__codelineno-1-135"></a><span class="cp">#define IR_RECEIVE_PIN      2</span>
+</span><span id="__span-1-136"><a id="__codelineno-1-136" name="__codelineno-1-136" href="#__codelineno-1-136"></a><span class="cp">#define IR_SEND_PIN        13</span>
+</span><span id="__span-1-137"><a id="__codelineno-1-137" name="__codelineno-1-137" href="#__codelineno-1-137"></a><span class="cp">#define TONE_PIN            4</span>
+</span><span id="__span-1-138"><a id="__codelineno-1-138" name="__codelineno-1-138" href="#__codelineno-1-138"></a><span class="cp">#define APPLICATION_PIN     5</span>
+</span><span id="__span-1-139"><a id="__codelineno-1-139" name="__codelineno-1-139" href="#__codelineno-1-139"></a><span class="cp">#define ALTERNATIVE_IR_FEEDBACK_LED_PIN 6 </span><span class="c1">// E.g. used for examples which use LED_BUILDIN for example output.</span>
+</span><span id="__span-1-140"><a id="__codelineno-1-140" name="__codelineno-1-140" href="#__codelineno-1-140"></a><span class="cp">#define _IR_TIMING_TEST_PIN 7</span>
+</span><span id="__span-1-141"><a id="__codelineno-1-141" name="__codelineno-1-141" href="#__codelineno-1-141"></a>
+</span><span id="__span-1-142"><a id="__codelineno-1-142" name="__codelineno-1-142" href="#__codelineno-1-142"></a><span class="cp">#  else </span><span class="c1">// Default as for ATmega328 like on Uno, Nano, Leonardo, Teensy 2.0 etc.</span>
+</span><span id="__span-1-143"><a id="__codelineno-1-143" name="__codelineno-1-143" href="#__codelineno-1-143"></a><span class="cp">#define IR_RECEIVE_PIN      2 </span><span class="c1">// To be compatible with interrupt example, pin 2 is chosen here.</span>
+</span><span id="__span-1-144"><a id="__codelineno-1-144" name="__codelineno-1-144" href="#__codelineno-1-144"></a><span class="cp">#define IR_SEND_PIN         3</span>
+</span><span id="__span-1-145"><a id="__codelineno-1-145" name="__codelineno-1-145" href="#__codelineno-1-145"></a><span class="cp">#define TONE_PIN            4</span>
+</span><span id="__span-1-146"><a id="__codelineno-1-146" name="__codelineno-1-146" href="#__codelineno-1-146"></a><span class="cp">#define APPLICATION_PIN     5</span>
+</span><span id="__span-1-147"><a id="__codelineno-1-147" name="__codelineno-1-147" href="#__codelineno-1-147"></a><span class="cp">#define ALTERNATIVE_IR_FEEDBACK_LED_PIN 6 </span><span class="c1">// E.g. used for examples which use LED_BUILDIN for example output.</span>
+</span><span id="__span-1-148"><a id="__codelineno-1-148" name="__codelineno-1-148" href="#__codelineno-1-148"></a><span class="cp">#define _IR_TIMING_TEST_PIN 7</span>
+</span><span id="__span-1-149"><a id="__codelineno-1-149" name="__codelineno-1-149" href="#__codelineno-1-149"></a>
+</span><span id="__span-1-150"><a id="__codelineno-1-150" name="__codelineno-1-150" href="#__codelineno-1-150"></a><span class="cp">#    if defined(ARDUINO_AVR_PROMICRO) </span><span class="c1">// Sparkfun Pro Micro is __AVR_ATmega32U4__ but has different external circuit</span>
+</span><span id="__span-1-151"><a id="__codelineno-1-151" name="__codelineno-1-151" href="#__codelineno-1-151"></a><span class="c1">// We have no built in LED at pin 13 -&gt; reuse RX LED</span>
+</span><span id="__span-1-152"><a id="__codelineno-1-152" name="__codelineno-1-152" href="#__codelineno-1-152"></a><span class="cp">#undef LED_BUILTIN</span>
+</span><span id="__span-1-153"><a id="__codelineno-1-153" name="__codelineno-1-153" href="#__codelineno-1-153"></a><span class="cp">#define LED_BUILTIN         LED_BUILTIN_RX</span>
+</span><span id="__span-1-154"><a id="__codelineno-1-154" name="__codelineno-1-154" href="#__codelineno-1-154"></a><span class="cp">#    endif</span>
+</span><span id="__span-1-155"><a id="__codelineno-1-155" name="__codelineno-1-155" href="#__codelineno-1-155"></a><span class="cp">#  endif </span><span class="c1">// defined(__AVR_ATtiny25__)...</span>
+</span><span id="__span-1-156"><a id="__codelineno-1-156" name="__codelineno-1-156" href="#__codelineno-1-156"></a>
+</span><span id="__span-1-157"><a id="__codelineno-1-157" name="__codelineno-1-157" href="#__codelineno-1-157"></a><span class="cp">#elif defined(ARDUINO_ARCH_RENESAS_UNO) </span><span class="c1">// Uno R4</span>
+</span><span id="__span-1-158"><a id="__codelineno-1-158" name="__codelineno-1-158" href="#__codelineno-1-158"></a><span class="c1">// To be compatible with Uno R3.</span>
+</span><span id="__span-1-159"><a id="__codelineno-1-159" name="__codelineno-1-159" href="#__codelineno-1-159"></a><span class="cp">#define IR_RECEIVE_PIN      2</span>
+</span><span id="__span-1-160"><a id="__codelineno-1-160" name="__codelineno-1-160" href="#__codelineno-1-160"></a><span class="cp">#define IR_SEND_PIN         3</span>
+</span><span id="__span-1-161"><a id="__codelineno-1-161" name="__codelineno-1-161" href="#__codelineno-1-161"></a><span class="cp">#define TONE_PIN            4</span>
+</span><span id="__span-1-162"><a id="__codelineno-1-162" name="__codelineno-1-162" href="#__codelineno-1-162"></a><span class="cp">#define APPLICATION_PIN     5</span>
+</span><span id="__span-1-163"><a id="__codelineno-1-163" name="__codelineno-1-163" href="#__codelineno-1-163"></a><span class="cp">#define ALTERNATIVE_IR_FEEDBACK_LED_PIN 6 </span><span class="c1">// E.g. used for examples which use LED_BUILDIN for example output.</span>
+</span><span id="__span-1-164"><a id="__codelineno-1-164" name="__codelineno-1-164" href="#__codelineno-1-164"></a><span class="cp">#define _IR_TIMING_TEST_PIN 7</span>
+</span><span id="__span-1-165"><a id="__codelineno-1-165" name="__codelineno-1-165" href="#__codelineno-1-165"></a>
+</span><span id="__span-1-166"><a id="__codelineno-1-166" name="__codelineno-1-166" href="#__codelineno-1-166"></a><span class="cp">#elif defined(ESP8266)</span>
+</span><span id="__span-1-167"><a id="__codelineno-1-167" name="__codelineno-1-167" href="#__codelineno-1-167"></a><span class="cp">#define FEEDBACK_LED_IS_ACTIVE_LOW </span><span class="c1">// The LED on my board (D4) is active LOW</span>
+</span><span id="__span-1-168"><a id="__codelineno-1-168" name="__codelineno-1-168" href="#__codelineno-1-168"></a><span class="cp">#define IR_RECEIVE_PIN          14 </span><span class="c1">// D5</span>
+</span><span id="__span-1-169"><a id="__codelineno-1-169" name="__codelineno-1-169" href="#__codelineno-1-169"></a><span class="cp">#define IR_SEND_PIN             12 </span><span class="c1">// D6 - D4/pin 2 is internal LED</span>
+</span><span id="__span-1-170"><a id="__codelineno-1-170" name="__codelineno-1-170" href="#__codelineno-1-170"></a><span class="cp">#define _IR_TIMING_TEST_PIN      2 </span><span class="c1">// D4</span>
+</span><span id="__span-1-171"><a id="__codelineno-1-171" name="__codelineno-1-171" href="#__codelineno-1-171"></a><span class="cp">#define APPLICATION_PIN         13 </span><span class="c1">// D7</span>
+</span><span id="__span-1-172"><a id="__codelineno-1-172" name="__codelineno-1-172" href="#__codelineno-1-172"></a>
+</span><span id="__span-1-173"><a id="__codelineno-1-173" name="__codelineno-1-173" href="#__codelineno-1-173"></a><span class="cp">#define tone(...) void()      </span><span class="c1">// tone() inhibits receive timer</span>
+</span><span id="__span-1-174"><a id="__codelineno-1-174" name="__codelineno-1-174" href="#__codelineno-1-174"></a><span class="cp">#define noTone(a) void()</span>
+</span><span id="__span-1-175"><a id="__codelineno-1-175" name="__codelineno-1-175" href="#__codelineno-1-175"></a><span class="cp">#define TONE_PIN                42 </span><span class="c1">// Dummy for examples using it</span>
+</span><span id="__span-1-176"><a id="__codelineno-1-176" name="__codelineno-1-176" href="#__codelineno-1-176"></a>
+</span><span id="__span-1-177"><a id="__codelineno-1-177" name="__codelineno-1-177" href="#__codelineno-1-177"></a><span class="cp">#elif defined(CONFIG_IDF_TARGET_ESP32C3) || defined(ARDUINO_ESP32C3_DEV)</span>
+</span><span id="__span-1-178"><a id="__codelineno-1-178" name="__codelineno-1-178" href="#__codelineno-1-178"></a><span class="cp">#define NO_LED_FEEDBACK_CODE   </span><span class="c1">// The  WS2812 on pin 8 of AI-C3 board crashes if used as receive feedback LED, other I/O pins are working...</span>
+</span><span id="__span-1-179"><a id="__codelineno-1-179" name="__codelineno-1-179" href="#__codelineno-1-179"></a><span class="cp">#define IR_RECEIVE_PIN           6</span>
+</span><span id="__span-1-180"><a id="__codelineno-1-180" name="__codelineno-1-180" href="#__codelineno-1-180"></a><span class="cp">#define IR_SEND_PIN              7</span>
+</span><span id="__span-1-181"><a id="__codelineno-1-181" name="__codelineno-1-181" href="#__codelineno-1-181"></a><span class="cp">#define TONE_PIN                10</span>
+</span><span id="__span-1-182"><a id="__codelineno-1-182" name="__codelineno-1-182" href="#__codelineno-1-182"></a><span class="cp">#define APPLICATION_PIN         18</span>
+</span><span id="__span-1-183"><a id="__codelineno-1-183" name="__codelineno-1-183" href="#__codelineno-1-183"></a>
+</span><span id="__span-1-184"><a id="__codelineno-1-184" name="__codelineno-1-184" href="#__codelineno-1-184"></a><span class="cp">#elif defined(ESP32)</span>
+</span><span id="__span-1-185"><a id="__codelineno-1-185" name="__codelineno-1-185" href="#__codelineno-1-185"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+</span><span id="__span-1-186"><a id="__codelineno-1-186" name="__codelineno-1-186" href="#__codelineno-1-186"></a>
+</span><span id="__span-1-187"><a id="__codelineno-1-187" name="__codelineno-1-187" href="#__codelineno-1-187"></a><span class="c1">// tone() is included in ESP32 core since 2.0.2</span>
+</span><span id="__span-1-188"><a id="__codelineno-1-188" name="__codelineno-1-188" href="#__codelineno-1-188"></a><span class="cp">#if !defined(ESP_ARDUINO_VERSION_VAL)</span>
+</span><span id="__span-1-189"><a id="__codelineno-1-189" name="__codelineno-1-189" href="#__codelineno-1-189"></a><span class="cp">#define ESP_ARDUINO_VERSION_VAL(major, minor, patch) 12345678</span>
+</span><span id="__span-1-190"><a id="__codelineno-1-190" name="__codelineno-1-190" href="#__codelineno-1-190"></a><span class="cp">#endif</span>
+</span><span id="__span-1-191"><a id="__codelineno-1-191" name="__codelineno-1-191" href="#__codelineno-1-191"></a><span class="cp">#if ESP_ARDUINO_VERSION  &lt;= ESP_ARDUINO_VERSION_VAL(2, 0, 2)</span>
+</span><span id="__span-1-192"><a id="__codelineno-1-192" name="__codelineno-1-192" href="#__codelineno-1-192"></a><span class="cp">#define TONE_LEDC_CHANNEL        1  </span><span class="c1">// Using channel 1 makes tone() independent of receiving timer -&gt; No need to stop receiving timer.</span>
+</span><span id="__span-1-193"><a id="__codelineno-1-193" name="__codelineno-1-193" href="#__codelineno-1-193"></a><span class="kt">void</span><span class="w"> </span><span class="nf">tone</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aPinNumber</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">aFrequency</span><span class="p">){</span>
+</span><span id="__span-1-194"><a id="__codelineno-1-194" name="__codelineno-1-194" href="#__codelineno-1-194"></a><span class="w">    </span><span class="n">ledcAttachPin</span><span class="p">(</span><span class="n">aPinNumber</span><span class="p">,</span><span class="w"> </span><span class="n">TONE_LEDC_CHANNEL</span><span class="p">);</span>
+</span><span id="__span-1-195"><a id="__codelineno-1-195" name="__codelineno-1-195" href="#__codelineno-1-195"></a><span class="w">    </span><span class="n">ledcWriteTone</span><span class="p">(</span><span class="n">TONE_LEDC_CHANNEL</span><span class="p">,</span><span class="w"> </span><span class="n">aFrequency</span><span class="p">);</span>
+</span><span id="__span-1-196"><a id="__codelineno-1-196" name="__codelineno-1-196" href="#__codelineno-1-196"></a><span class="p">}</span>
+</span><span id="__span-1-197"><a id="__codelineno-1-197" name="__codelineno-1-197" href="#__codelineno-1-197"></a><span class="kt">void</span><span class="w"> </span><span class="nf">tone</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aPinNumber</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">aFrequency</span><span class="p">,</span><span class="w"> </span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">long</span><span class="w"> </span><span class="n">aDuration</span><span class="p">){</span>
+</span><span id="__span-1-198"><a id="__codelineno-1-198" name="__codelineno-1-198" href="#__codelineno-1-198"></a><span class="w">    </span><span class="n">ledcAttachPin</span><span class="p">(</span><span class="n">aPinNumber</span><span class="p">,</span><span class="w"> </span><span class="n">TONE_LEDC_CHANNEL</span><span class="p">);</span>
+</span><span id="__span-1-199"><a id="__codelineno-1-199" name="__codelineno-1-199" href="#__codelineno-1-199"></a><span class="w">    </span><span class="n">ledcWriteTone</span><span class="p">(</span><span class="n">TONE_LEDC_CHANNEL</span><span class="p">,</span><span class="w"> </span><span class="n">aFrequency</span><span class="p">);</span>
+</span><span id="__span-1-200"><a id="__codelineno-1-200" name="__codelineno-1-200" href="#__codelineno-1-200"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="n">aDuration</span><span class="p">);</span>
+</span><span id="__span-1-201"><a id="__codelineno-1-201" name="__codelineno-1-201" href="#__codelineno-1-201"></a><span class="w">    </span><span class="n">ledcWriteTone</span><span class="p">(</span><span class="n">TONE_LEDC_CHANNEL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-1-202"><a id="__codelineno-1-202" name="__codelineno-1-202" href="#__codelineno-1-202"></a><span class="p">}</span>
+</span><span id="__span-1-203"><a id="__codelineno-1-203" name="__codelineno-1-203" href="#__codelineno-1-203"></a><span class="kt">void</span><span class="w"> </span><span class="nf">noTone</span><span class="p">(</span><span class="kt">uint8_t</span><span class="w"> </span><span class="n">aPinNumber</span><span class="p">){</span>
+</span><span id="__span-1-204"><a id="__codelineno-1-204" name="__codelineno-1-204" href="#__codelineno-1-204"></a><span class="w">    </span><span class="n">ledcWriteTone</span><span class="p">(</span><span class="n">TONE_LEDC_CHANNEL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-1-205"><a id="__codelineno-1-205" name="__codelineno-1-205" href="#__codelineno-1-205"></a><span class="p">}</span>
+</span><span id="__span-1-206"><a id="__codelineno-1-206" name="__codelineno-1-206" href="#__codelineno-1-206"></a><span class="cp">#endif </span><span class="c1">// ESP_ARDUINO_VERSION  &lt;= ESP_ARDUINO_VERSION_VAL(2, 0, 2)</span>
+</span><span id="__span-1-207"><a id="__codelineno-1-207" name="__codelineno-1-207" href="#__codelineno-1-207"></a>
+</span><span id="__span-1-208"><a id="__codelineno-1-208" name="__codelineno-1-208" href="#__codelineno-1-208"></a><span class="cp">#define IR_RECEIVE_PIN          15  </span><span class="c1">// D15</span>
+</span><span id="__span-1-209"><a id="__codelineno-1-209" name="__codelineno-1-209" href="#__codelineno-1-209"></a><span class="cp">#define IR_SEND_PIN              4  </span><span class="c1">// D4</span>
+</span><span id="__span-1-210"><a id="__codelineno-1-210" name="__codelineno-1-210" href="#__codelineno-1-210"></a><span class="cp">#define TONE_PIN                27  </span><span class="c1">// D27 25 &amp; 26 are DAC0 and 1</span>
+</span><span id="__span-1-211"><a id="__codelineno-1-211" name="__codelineno-1-211" href="#__codelineno-1-211"></a><span class="cp">#define APPLICATION_PIN         16  </span><span class="c1">// RX2 pin</span>
+</span><span id="__span-1-212"><a id="__codelineno-1-212" name="__codelineno-1-212" href="#__codelineno-1-212"></a>
+</span><span id="__span-1-213"><a id="__codelineno-1-213" name="__codelineno-1-213" href="#__codelineno-1-213"></a><span class="cp">#elif defined(ARDUINO_ARCH_STM32) || defined(ARDUINO_ARCH_STM32F1) </span><span class="c1">// BluePill</span>
+</span><span id="__span-1-214"><a id="__codelineno-1-214" name="__codelineno-1-214" href="#__codelineno-1-214"></a><span class="c1">// Timer 3 blocks PA6, PA7, PB0, PB1 for use by Servo or tone()</span>
+</span><span id="__span-1-215"><a id="__codelineno-1-215" name="__codelineno-1-215" href="#__codelineno-1-215"></a><span class="cp">#define IR_RECEIVE_PIN          PA6</span>
+</span><span id="__span-1-216"><a id="__codelineno-1-216" name="__codelineno-1-216" href="#__codelineno-1-216"></a><span class="cp">#define IR_RECEIVE_PIN_STRING   "PA6"</span>
+</span><span id="__span-1-217"><a id="__codelineno-1-217" name="__codelineno-1-217" href="#__codelineno-1-217"></a><span class="cp">#define IR_SEND_PIN             PA7</span>
+</span><span id="__span-1-218"><a id="__codelineno-1-218" name="__codelineno-1-218" href="#__codelineno-1-218"></a><span class="cp">#define IR_SEND_PIN_STRING      "PA7"</span>
+</span><span id="__span-1-219"><a id="__codelineno-1-219" name="__codelineno-1-219" href="#__codelineno-1-219"></a><span class="cp">#define TONE_PIN                PA3</span>
+</span><span id="__span-1-220"><a id="__codelineno-1-220" name="__codelineno-1-220" href="#__codelineno-1-220"></a><span class="cp">#define _IR_TIMING_TEST_PIN     PA5</span>
+</span><span id="__span-1-221"><a id="__codelineno-1-221" name="__codelineno-1-221" href="#__codelineno-1-221"></a><span class="cp">#define APPLICATION_PIN         PA2</span>
+</span><span id="__span-1-222"><a id="__codelineno-1-222" name="__codelineno-1-222" href="#__codelineno-1-222"></a><span class="cp">#define APPLICATION_PIN_STRING  "PA2"</span>
+</span><span id="__span-1-223"><a id="__codelineno-1-223" name="__codelineno-1-223" href="#__codelineno-1-223"></a><span class="cp">#  if defined(ARDUINO_GENERIC_STM32F103C) || defined(ARDUINO_BLUEPILL_F103C8)</span>
+</span><span id="__span-1-224"><a id="__codelineno-1-224" name="__codelineno-1-224" href="#__codelineno-1-224"></a><span class="c1">// BluePill LED is active low</span>
+</span><span id="__span-1-225"><a id="__codelineno-1-225" name="__codelineno-1-225" href="#__codelineno-1-225"></a><span class="cp">#define FEEDBACK_LED_IS_ACTIVE_LOW</span>
+</span><span id="__span-1-226"><a id="__codelineno-1-226" name="__codelineno-1-226" href="#__codelineno-1-226"></a><span class="cp">#  endif</span>
+</span><span id="__span-1-227"><a id="__codelineno-1-227" name="__codelineno-1-227" href="#__codelineno-1-227"></a>
+</span><span id="__span-1-228"><a id="__codelineno-1-228" name="__codelineno-1-228" href="#__codelineno-1-228"></a><span class="cp">#elif defined(ARDUINO_ARCH_APOLLO3) </span><span class="c1">// Sparkfun Apollo boards</span>
+</span><span id="__span-1-229"><a id="__codelineno-1-229" name="__codelineno-1-229" href="#__codelineno-1-229"></a><span class="cp">#define IR_RECEIVE_PIN  11</span>
+</span><span id="__span-1-230"><a id="__codelineno-1-230" name="__codelineno-1-230" href="#__codelineno-1-230"></a><span class="cp">#define IR_SEND_PIN     12</span>
+</span><span id="__span-1-231"><a id="__codelineno-1-231" name="__codelineno-1-231" href="#__codelineno-1-231"></a><span class="cp">#define TONE_PIN         5</span>
+</span><span id="__span-1-232"><a id="__codelineno-1-232" name="__codelineno-1-232" href="#__codelineno-1-232"></a>
+</span><span id="__span-1-233"><a id="__codelineno-1-233" name="__codelineno-1-233" href="#__codelineno-1-233"></a><span class="cp">#elif defined(ARDUINO_ARCH_MBED) &amp;&amp; defined(ARDUINO_ARCH_MBED_NANO) </span><span class="c1">// Arduino Nano 33 BLE</span>
+</span><span id="__span-1-234"><a id="__codelineno-1-234" name="__codelineno-1-234" href="#__codelineno-1-234"></a><span class="cp">#define IR_RECEIVE_PIN      3   </span><span class="c1">// GPIO15 Start with pin 3 since pin 2|GPIO25 is connected to LED on Pi pico</span>
+</span><span id="__span-1-235"><a id="__codelineno-1-235" name="__codelineno-1-235" href="#__codelineno-1-235"></a><span class="cp">#define IR_SEND_PIN         4   </span><span class="c1">// GPIO16</span>
+</span><span id="__span-1-236"><a id="__codelineno-1-236" name="__codelineno-1-236" href="#__codelineno-1-236"></a><span class="cp">#define TONE_PIN            5</span>
+</span><span id="__span-1-237"><a id="__codelineno-1-237" name="__codelineno-1-237" href="#__codelineno-1-237"></a><span class="cp">#define APPLICATION_PIN     6</span>
+</span><span id="__span-1-238"><a id="__codelineno-1-238" name="__codelineno-1-238" href="#__codelineno-1-238"></a><span class="cp">#define ALTERNATIVE_IR_FEEDBACK_LED_PIN 7 </span><span class="c1">// E.g. used for examples which use LED_BUILDIN for example output.</span>
+</span><span id="__span-1-239"><a id="__codelineno-1-239" name="__codelineno-1-239" href="#__codelineno-1-239"></a><span class="cp">#define _IR_TIMING_TEST_PIN 8</span>
+</span><span id="__span-1-240"><a id="__codelineno-1-240" name="__codelineno-1-240" href="#__codelineno-1-240"></a>
+</span><span id="__span-1-241"><a id="__codelineno-1-241" name="__codelineno-1-241" href="#__codelineno-1-241"></a><span class="cp">#elif defined(ARDUINO_ARCH_RP2040) </span><span class="c1">// Arduino Nano Connect, Pi Pico with arduino-pico core https://github.com/earlephilhower/arduino-pico</span>
+</span><span id="__span-1-242"><a id="__codelineno-1-242" name="__codelineno-1-242" href="#__codelineno-1-242"></a><span class="cp">#define IR_RECEIVE_PIN      15  </span><span class="c1">// GPIO15 to be compatible with the Arduino Nano RP2040 Connect (pin3)</span>
+</span><span id="__span-1-243"><a id="__codelineno-1-243" name="__codelineno-1-243" href="#__codelineno-1-243"></a><span class="cp">#define IR_SEND_PIN         16  </span><span class="c1">// GPIO16</span>
+</span><span id="__span-1-244"><a id="__codelineno-1-244" name="__codelineno-1-244" href="#__codelineno-1-244"></a><span class="cp">#define TONE_PIN            17</span>
+</span><span id="__span-1-245"><a id="__codelineno-1-245" name="__codelineno-1-245" href="#__codelineno-1-245"></a><span class="cp">#define APPLICATION_PIN     18</span>
+</span><span id="__span-1-246"><a id="__codelineno-1-246" name="__codelineno-1-246" href="#__codelineno-1-246"></a><span class="cp">#define ALTERNATIVE_IR_FEEDBACK_LED_PIN 19 </span><span class="c1">// E.g. used for examples which use LED_BUILDIN for example output.</span>
+</span><span id="__span-1-247"><a id="__codelineno-1-247" name="__codelineno-1-247" href="#__codelineno-1-247"></a><span class="cp">#define _IR_TIMING_TEST_PIN 20</span>
+</span><span id="__span-1-248"><a id="__codelineno-1-248" name="__codelineno-1-248" href="#__codelineno-1-248"></a>
+</span><span id="__span-1-249"><a id="__codelineno-1-249" name="__codelineno-1-249" href="#__codelineno-1-249"></a><span class="c1">// If you program the Nano RP2040 Connect with this core, then you must redefine LED_BUILTIN</span>
+</span><span id="__span-1-250"><a id="__codelineno-1-250" name="__codelineno-1-250" href="#__codelineno-1-250"></a><span class="c1">// and use the external reset with 1 kOhm to ground to enter UF2 mode</span>
+</span><span id="__span-1-251"><a id="__codelineno-1-251" name="__codelineno-1-251" href="#__codelineno-1-251"></a><span class="cp">#undef LED_BUILTIN</span>
+</span><span id="__span-1-252"><a id="__codelineno-1-252" name="__codelineno-1-252" href="#__codelineno-1-252"></a><span class="cp">#define LED_BUILTIN          6</span>
+</span><span id="__span-1-253"><a id="__codelineno-1-253" name="__codelineno-1-253" href="#__codelineno-1-253"></a>
+</span><span id="__span-1-254"><a id="__codelineno-1-254" name="__codelineno-1-254" href="#__codelineno-1-254"></a><span class="cp">#elif defined(PARTICLE) </span><span class="c1">// !!!UNTESTED!!!</span>
+</span><span id="__span-1-255"><a id="__codelineno-1-255" name="__codelineno-1-255" href="#__codelineno-1-255"></a><span class="cp">#define IR_RECEIVE_PIN      A4</span>
+</span><span id="__span-1-256"><a id="__codelineno-1-256" name="__codelineno-1-256" href="#__codelineno-1-256"></a><span class="cp">#define IR_SEND_PIN         A5 </span><span class="c1">// Particle supports multiple pins</span>
+</span><span id="__span-1-257"><a id="__codelineno-1-257" name="__codelineno-1-257" href="#__codelineno-1-257"></a>
+</span><span id="__span-1-258"><a id="__codelineno-1-258" name="__codelineno-1-258" href="#__codelineno-1-258"></a><span class="cp">#define LED_BUILTIN         D7</span>
+</span><span id="__span-1-259"><a id="__codelineno-1-259" name="__codelineno-1-259" href="#__codelineno-1-259"></a>
+</span><span id="__span-1-260"><a id="__codelineno-1-260" name="__codelineno-1-260" href="#__codelineno-1-260"></a><span class="cm">/*</span>
+</span><span id="__span-1-261"><a id="__codelineno-1-261" name="__codelineno-1-261" href="#__codelineno-1-261"></a><span class="cm"> * 4 times the same (default) layout for easy adaption in the future</span>
+</span><span id="__span-1-262"><a id="__codelineno-1-262" name="__codelineno-1-262" href="#__codelineno-1-262"></a><span class="cm"> */</span>
+</span><span id="__span-1-263"><a id="__codelineno-1-263" name="__codelineno-1-263" href="#__codelineno-1-263"></a><span class="cp">#elif defined(TEENSYDUINO) </span><span class="c1">// Teensy 2.0 is handled at default for ATmega328 like on Uno, Nano, Leonardo etc.</span>
+</span><span id="__span-1-264"><a id="__codelineno-1-264" name="__codelineno-1-264" href="#__codelineno-1-264"></a><span class="cp">#define IR_RECEIVE_PIN      2</span>
+</span><span id="__span-1-265"><a id="__codelineno-1-265" name="__codelineno-1-265" href="#__codelineno-1-265"></a><span class="cp">#define IR_SEND_PIN         3</span>
+</span><span id="__span-1-266"><a id="__codelineno-1-266" name="__codelineno-1-266" href="#__codelineno-1-266"></a><span class="cp">#define TONE_PIN            4</span>
+</span><span id="__span-1-267"><a id="__codelineno-1-267" name="__codelineno-1-267" href="#__codelineno-1-267"></a><span class="cp">#define APPLICATION_PIN     5</span>
+</span><span id="__span-1-268"><a id="__codelineno-1-268" name="__codelineno-1-268" href="#__codelineno-1-268"></a><span class="cp">#define ALTERNATIVE_IR_FEEDBACK_LED_PIN 6 </span><span class="c1">// E.g. used for examples which use LED_BUILDIN for example output.</span>
+</span><span id="__span-1-269"><a id="__codelineno-1-269" name="__codelineno-1-269" href="#__codelineno-1-269"></a><span class="cp">#define _IR_TIMING_TEST_PIN 7</span>
+</span><span id="__span-1-270"><a id="__codelineno-1-270" name="__codelineno-1-270" href="#__codelineno-1-270"></a>
+</span><span id="__span-1-271"><a id="__codelineno-1-271" name="__codelineno-1-271" href="#__codelineno-1-271"></a><span class="cp">#elif defined(ARDUINO_ARCH_MBED) </span><span class="c1">// Arduino Nano 33 BLE</span>
+</span><span id="__span-1-272"><a id="__codelineno-1-272" name="__codelineno-1-272" href="#__codelineno-1-272"></a><span class="cp">#define IR_RECEIVE_PIN      2</span>
+</span><span id="__span-1-273"><a id="__codelineno-1-273" name="__codelineno-1-273" href="#__codelineno-1-273"></a><span class="cp">#define IR_SEND_PIN         3</span>
+</span><span id="__span-1-274"><a id="__codelineno-1-274" name="__codelineno-1-274" href="#__codelineno-1-274"></a><span class="cp">#define TONE_PIN            4</span>
+</span><span id="__span-1-275"><a id="__codelineno-1-275" name="__codelineno-1-275" href="#__codelineno-1-275"></a><span class="cp">#define APPLICATION_PIN     5</span>
+</span><span id="__span-1-276"><a id="__codelineno-1-276" name="__codelineno-1-276" href="#__codelineno-1-276"></a><span class="cp">#define ALTERNATIVE_IR_FEEDBACK_LED_PIN 6 </span><span class="c1">// E.g. used for examples which use LED_BUILDIN for example output.</span>
+</span><span id="__span-1-277"><a id="__codelineno-1-277" name="__codelineno-1-277" href="#__codelineno-1-277"></a><span class="cp">#define _IR_TIMING_TEST_PIN 7</span>
+</span><span id="__span-1-278"><a id="__codelineno-1-278" name="__codelineno-1-278" href="#__codelineno-1-278"></a>
+</span><span id="__span-1-279"><a id="__codelineno-1-279" name="__codelineno-1-279" href="#__codelineno-1-279"></a><span class="cp">#elif defined(ARDUINO_ARCH_SAMD) || defined(ARDUINO_ARCH_SAM)</span>
+</span><span id="__span-1-280"><a id="__codelineno-1-280" name="__codelineno-1-280" href="#__codelineno-1-280"></a><span class="cp">#define IR_RECEIVE_PIN      2</span>
+</span><span id="__span-1-281"><a id="__codelineno-1-281" name="__codelineno-1-281" href="#__codelineno-1-281"></a><span class="cp">#define IR_SEND_PIN         3</span>
+</span><span id="__span-1-282"><a id="__codelineno-1-282" name="__codelineno-1-282" href="#__codelineno-1-282"></a><span class="cp">#define TONE_PIN            4</span>
+</span><span id="__span-1-283"><a id="__codelineno-1-283" name="__codelineno-1-283" href="#__codelineno-1-283"></a><span class="cp">#define APPLICATION_PIN     5</span>
+</span><span id="__span-1-284"><a id="__codelineno-1-284" name="__codelineno-1-284" href="#__codelineno-1-284"></a><span class="cp">#define ALTERNATIVE_IR_FEEDBACK_LED_PIN 6 </span><span class="c1">// E.g. used for examples which use LED_BUILDIN for example output.</span>
+</span><span id="__span-1-285"><a id="__codelineno-1-285" name="__codelineno-1-285" href="#__codelineno-1-285"></a><span class="cp">#define _IR_TIMING_TEST_PIN 7</span>
+</span><span id="__span-1-286"><a id="__codelineno-1-286" name="__codelineno-1-286" href="#__codelineno-1-286"></a>
+</span><span id="__span-1-287"><a id="__codelineno-1-287" name="__codelineno-1-287" href="#__codelineno-1-287"></a><span class="cp">#if !defined(ARDUINO_SAMD_ADAFRUIT) &amp;&amp; !defined(ARDUINO_SEEED_XIAO_M0)</span>
+</span><span id="__span-1-288"><a id="__codelineno-1-288" name="__codelineno-1-288" href="#__codelineno-1-288"></a><span class="c1">// On the Zero and others we switch explicitly to SerialUSB</span>
+</span><span id="__span-1-289"><a id="__codelineno-1-289" name="__codelineno-1-289" href="#__codelineno-1-289"></a><span class="cp">#define Serial SerialUSB</span>
+</span><span id="__span-1-290"><a id="__codelineno-1-290" name="__codelineno-1-290" href="#__codelineno-1-290"></a><span class="cp">#endif</span>
+</span><span id="__span-1-291"><a id="__codelineno-1-291" name="__codelineno-1-291" href="#__codelineno-1-291"></a>
+</span><span id="__span-1-292"><a id="__codelineno-1-292" name="__codelineno-1-292" href="#__codelineno-1-292"></a><span class="c1">// Definitions for the Chinese SAMD21 M0-Mini clone, which has no led connected to D13/PA17.</span>
+</span><span id="__span-1-293"><a id="__codelineno-1-293" name="__codelineno-1-293" href="#__codelineno-1-293"></a><span class="c1">// Attention!!! D2 and D4 are swapped on these boards!!!</span>
+</span><span id="__span-1-294"><a id="__codelineno-1-294" name="__codelineno-1-294" href="#__codelineno-1-294"></a><span class="c1">// If you connect the LED, it is on pin 24/PB11. In this case activate the next two lines.</span>
+</span><span id="__span-1-295"><a id="__codelineno-1-295" name="__codelineno-1-295" href="#__codelineno-1-295"></a><span class="c1">//#undef LED_BUILTIN</span>
+</span><span id="__span-1-296"><a id="__codelineno-1-296" name="__codelineno-1-296" href="#__codelineno-1-296"></a><span class="c1">//#define LED_BUILTIN 24 // PB11</span>
+</span><span id="__span-1-297"><a id="__codelineno-1-297" name="__codelineno-1-297" href="#__codelineno-1-297"></a><span class="c1">// As an alternative you can choose pin 25, it is the RX-LED pin (PB03), but active low.In this case activate the next 3 lines.</span>
+</span><span id="__span-1-298"><a id="__codelineno-1-298" name="__codelineno-1-298" href="#__codelineno-1-298"></a><span class="c1">//#undef LED_BUILTIN</span>
+</span><span id="__span-1-299"><a id="__codelineno-1-299" name="__codelineno-1-299" href="#__codelineno-1-299"></a><span class="c1">//#define LED_BUILTIN 25 // PB03</span>
+</span><span id="__span-1-300"><a id="__codelineno-1-300" name="__codelineno-1-300" href="#__codelineno-1-300"></a><span class="c1">//#define FEEDBACK_LED_IS_ACTIVE_LOW // The RX LED on the M0-Mini is active LOW</span>
+</span><span id="__span-1-301"><a id="__codelineno-1-301" name="__codelineno-1-301" href="#__codelineno-1-301"></a>
+</span><span id="__span-1-302"><a id="__codelineno-1-302" name="__codelineno-1-302" href="#__codelineno-1-302"></a><span class="cp">#elif defined (NRF51) </span><span class="c1">// BBC micro:bit</span>
+</span><span id="__span-1-303"><a id="__codelineno-1-303" name="__codelineno-1-303" href="#__codelineno-1-303"></a><span class="cp">#define IR_RECEIVE_PIN      2</span>
+</span><span id="__span-1-304"><a id="__codelineno-1-304" name="__codelineno-1-304" href="#__codelineno-1-304"></a><span class="cp">#define IR_SEND_PIN         3</span>
+</span><span id="__span-1-305"><a id="__codelineno-1-305" name="__codelineno-1-305" href="#__codelineno-1-305"></a><span class="cp">#define APPLICATION_PIN     1</span>
+</span><span id="__span-1-306"><a id="__codelineno-1-306" name="__codelineno-1-306" href="#__codelineno-1-306"></a><span class="cp">#define _IR_TIMING_TEST_PIN 4</span>
+</span><span id="__span-1-307"><a id="__codelineno-1-307" name="__codelineno-1-307" href="#__codelineno-1-307"></a>
+</span><span id="__span-1-308"><a id="__codelineno-1-308" name="__codelineno-1-308" href="#__codelineno-1-308"></a><span class="cp">#define tone(...) void()    </span><span class="c1">// no tone() available</span>
+</span><span id="__span-1-309"><a id="__codelineno-1-309" name="__codelineno-1-309" href="#__codelineno-1-309"></a><span class="cp">#define noTone(a) void()</span>
+</span><span id="__span-1-310"><a id="__codelineno-1-310" name="__codelineno-1-310" href="#__codelineno-1-310"></a><span class="cp">#define TONE_PIN           42 </span><span class="c1">// Dummy for examples using it</span>
+</span><span id="__span-1-311"><a id="__codelineno-1-311" name="__codelineno-1-311" href="#__codelineno-1-311"></a>
+</span><span id="__span-1-312"><a id="__codelineno-1-312" name="__codelineno-1-312" href="#__codelineno-1-312"></a><span class="cp">#else</span>
+</span><span id="__span-1-313"><a id="__codelineno-1-313" name="__codelineno-1-313" href="#__codelineno-1-313"></a><span class="cp">#warning Board / CPU is not detected using pre-processor symbols -&gt; using default values, which may not fit. Please extend PinDefinitionsAndMore.h.</span>
+</span><span id="__span-1-314"><a id="__codelineno-1-314" name="__codelineno-1-314" href="#__codelineno-1-314"></a><span class="c1">// Default valued for unidentified boards</span>
+</span><span id="__span-1-315"><a id="__codelineno-1-315" name="__codelineno-1-315" href="#__codelineno-1-315"></a><span class="cp">#define IR_RECEIVE_PIN      2</span>
+</span><span id="__span-1-316"><a id="__codelineno-1-316" name="__codelineno-1-316" href="#__codelineno-1-316"></a><span class="cp">#define IR_SEND_PIN         3</span>
+</span><span id="__span-1-317"><a id="__codelineno-1-317" name="__codelineno-1-317" href="#__codelineno-1-317"></a><span class="cp">#define TONE_PIN            4</span>
+</span><span id="__span-1-318"><a id="__codelineno-1-318" name="__codelineno-1-318" href="#__codelineno-1-318"></a><span class="cp">#define APPLICATION_PIN     5</span>
+</span><span id="__span-1-319"><a id="__codelineno-1-319" name="__codelineno-1-319" href="#__codelineno-1-319"></a><span class="cp">#define ALTERNATIVE_IR_FEEDBACK_LED_PIN 6 </span><span class="c1">// E.g. used for examples which use LED_BUILDIN for example output.</span>
+</span><span id="__span-1-320"><a id="__codelineno-1-320" name="__codelineno-1-320" href="#__codelineno-1-320"></a><span class="cp">#define _IR_TIMING_TEST_PIN 7</span>
+</span><span id="__span-1-321"><a id="__codelineno-1-321" name="__codelineno-1-321" href="#__codelineno-1-321"></a><span class="cp">#endif </span><span class="c1">// defined(ESP8266)</span>
+</span><span id="__span-1-322"><a id="__codelineno-1-322" name="__codelineno-1-322" href="#__codelineno-1-322"></a>
+</span><span id="__span-1-323"><a id="__codelineno-1-323" name="__codelineno-1-323" href="#__codelineno-1-323"></a><span class="cp">#if defined(ESP32) || defined(ARDUINO_ARCH_RP2040) || defined(PARTICLE) || defined(ARDUINO_ARCH_MBED)</span>
+</span><span id="__span-1-324"><a id="__codelineno-1-324" name="__codelineno-1-324" href="#__codelineno-1-324"></a><span class="cp">#define SEND_PWM_BY_TIMER </span><span class="c1">// We do not have pin restrictions for this CPU's, so lets use the hardware PWM for send carrier signal generation</span>
+</span><span id="__span-1-325"><a id="__codelineno-1-325" name="__codelineno-1-325" href="#__codelineno-1-325"></a><span class="cp">#else</span>
+</span><span id="__span-1-326"><a id="__codelineno-1-326" name="__codelineno-1-326" href="#__codelineno-1-326"></a><span class="cp"># if defined(SEND_PWM_BY_TIMER)</span>
+</span><span id="__span-1-327"><a id="__codelineno-1-327" name="__codelineno-1-327" href="#__codelineno-1-327"></a><span class="cp">#undef IR_SEND_PIN </span><span class="c1">// SendPin is determined by timer! This avoids warnings in IRremote.hpp and IRTimer.hpp</span>
+</span><span id="__span-1-328"><a id="__codelineno-1-328" name="__codelineno-1-328" href="#__codelineno-1-328"></a><span class="cp">#  endif</span>
+</span><span id="__span-1-329"><a id="__codelineno-1-329" name="__codelineno-1-329" href="#__codelineno-1-329"></a><span class="cp">#endif</span>
+</span><span id="__span-1-330"><a id="__codelineno-1-330" name="__codelineno-1-330" href="#__codelineno-1-330"></a>
+</span><span id="__span-1-331"><a id="__codelineno-1-331" name="__codelineno-1-331" href="#__codelineno-1-331"></a><span class="cp">#if !defined (FLASHEND)</span>
+</span><span id="__span-1-332"><a id="__codelineno-1-332" name="__codelineno-1-332" href="#__codelineno-1-332"></a><span class="cp">#define FLASHEND 0xFFFF </span><span class="c1">// Dummy value for platforms where FLASHEND is not defined</span>
+</span><span id="__span-1-333"><a id="__codelineno-1-333" name="__codelineno-1-333" href="#__codelineno-1-333"></a><span class="cp">#endif</span>
+</span><span id="__span-1-334"><a id="__codelineno-1-334" name="__codelineno-1-334" href="#__codelineno-1-334"></a><span class="cp">#if !defined (RAMEND)</span>
+</span><span id="__span-1-335"><a id="__codelineno-1-335" name="__codelineno-1-335" href="#__codelineno-1-335"></a><span class="cp">#define RAMEND 0xFFFF </span><span class="c1">// Dummy value for platforms where RAMEND is not defined</span>
+</span><span id="__span-1-336"><a id="__codelineno-1-336" name="__codelineno-1-336" href="#__codelineno-1-336"></a><span class="cp">#endif</span>
+</span><span id="__span-1-337"><a id="__codelineno-1-337" name="__codelineno-1-337" href="#__codelineno-1-337"></a><span class="cp">#if !defined (RAMSIZE)</span>
+</span><span id="__span-1-338"><a id="__codelineno-1-338" name="__codelineno-1-338" href="#__codelineno-1-338"></a><span class="cp">#define RAMSIZE 0xFFFF </span><span class="c1">// Dummy value for platforms where RAMSIZE is not defined</span>
+</span><span id="__span-1-339"><a id="__codelineno-1-339" name="__codelineno-1-339" href="#__codelineno-1-339"></a><span class="cp">#endif</span>
+</span><span id="__span-1-340"><a id="__codelineno-1-340" name="__codelineno-1-340" href="#__codelineno-1-340"></a>
+</span><span id="__span-1-341"><a id="__codelineno-1-341" name="__codelineno-1-341" href="#__codelineno-1-341"></a><span class="cm">/*</span>
+</span><span id="__span-1-342"><a id="__codelineno-1-342" name="__codelineno-1-342" href="#__codelineno-1-342"></a><span class="cm"> * Helper macro for getting a macro definition as string</span>
+</span><span id="__span-1-343"><a id="__codelineno-1-343" name="__codelineno-1-343" href="#__codelineno-1-343"></a><span class="cm"> */</span>
+</span><span id="__span-1-344"><a id="__codelineno-1-344" name="__codelineno-1-344" href="#__codelineno-1-344"></a><span class="cp">#if !defined(STR_HELPER)</span>
+</span><span id="__span-1-345"><a id="__codelineno-1-345" name="__codelineno-1-345" href="#__codelineno-1-345"></a><span class="cp">#define STR_HELPER(x) #x</span>
+</span><span id="__span-1-346"><a id="__codelineno-1-346" name="__codelineno-1-346" href="#__codelineno-1-346"></a><span class="cp">#define STR(x) STR_HELPER(x)</span>
+</span><span id="__span-1-347"><a id="__codelineno-1-347" name="__codelineno-1-347" href="#__codelineno-1-347"></a><span class="cp">#endif</span>
+</span></code></pre></div>
+<h3 id="define-ir-receiver-and-leds-pin-number">Define IR receiver and LEDs Pin number</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#define IR_RECEIVE_PIN 5</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#define DECODE_NEC</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1">// define LED indicators on board</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="cp">#define LED_1 6     </span><span class="c1">// Green LED </span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="cp">#define LED_2 7     </span><span class="c1">// Red LED</span>
+</span></code></pre></div>
+<h3 id="initializing-pin-mode">Initializing Pin Mode</h3>
+<p>Set the pin direction to <code>OUTPUT</code> in setup function sector.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"> </span><span class="c1">// note the baudrate is changed to 115200 </span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="c1">// enable IR </span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">IR_RECEIVE_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">ENABLE_LED_FEEDBACK</span><span class="p">);</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="n">printActiveIRProtocols</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial</span><span class="p">);</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_1</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">LED_2</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="modify-loop-section">Modify loop section</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decode</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="cm">/*</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="cm">      * print a summary of received data</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="cm">      */</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decodedIRData</span><span class="p">.</span><span class="n">protocol</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">UNKNOWN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Received noise or an unknown (or not yet enabled )protocol"</span><span class="p">));</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">      </span><span class="c1">// we have an unknown protocol here, print extend info</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">printIRResultRawFormatted</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">resume</span><span class="p">();</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">      </span><span class="c1">// Do it here to preserve raw data for printing with printIRResultRawFormatted()</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">resume</span><span class="p">();</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">printIRResultShort</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial</span><span class="p">);</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">printIRSendUsage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial</span><span class="p">);</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decodedIRData</span><span class="p">.</span><span class="n">command</span><span class="p">);</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decodedIRData</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x40</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">      </span><span class="c1">// press on button on IR controller will generate this data 0x40</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_1</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_2</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decodedIRData</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x19</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">      </span><span class="c1">// press off button on IR controller will generate this data 0x19</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_1</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_2</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="demo-code-examples">Demo code examples</h3>
+<p></p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;IRremote.h&gt;</span><span class="c1">  // IR remote header file</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Arduino.h&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">"PinDefinitionsAndMore.h"</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;IRremote.hpp&gt;</span><span class="c1">  // include the library</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="cp">#define IR_RECEIVE_PIN 5</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="cp">#define DECODE_NEC</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="c1">// define LED indicators on board</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="cp">#define LED_1 6</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="cp">#define LED_2 7</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="w">  </span><span class="c1">// enable IR</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a><span class="w">  </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="n">IR_RECEIVE_PIN</span><span class="p">,</span><span class="w"> </span><span class="n">ENABLE_LED_FEEDBACK</span><span class="p">);</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a><span class="w">  </span><span class="n">printActiveIRProtocols</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial</span><span class="p">);</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="p">}</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decode</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a><span class="w">    </span><span class="cm">/*</span>
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a><span class="cm">     * print a summary of received data</span>
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="cm">     */</span>
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decodedIRData</span><span class="p">.</span><span class="n">protocol</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">UNKNOWN</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="w">      </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">F</span><span class="p">(</span><span class="s">"Received noise or an unknown (or not yet enabled )protocol"</span><span class="p">));</span>
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="w">      </span><span class="c1">// we have an unknown protocol here, print extend info</span>
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">printIRResultRawFormatted</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">);</span>
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">resume</span><span class="p">();</span>
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a><span class="w">      </span><span class="c1">// Do it here to preserve raw data for printing with printIRResultRawFormatted()</span>
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">resume</span><span class="p">();</span>
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">printIRResultShort</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial</span><span class="p">);</span>
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="w">      </span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">printIRSendUsage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">Serial</span><span class="p">);</span>
+</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">();</span>
+</span><span id="__span-5-42"><a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decodedIRData</span><span class="p">.</span><span class="n">command</span><span class="p">);</span>
+</span><span id="__span-5-43"><a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>
+</span><span id="__span-5-44"><a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decodedIRData</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x40</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-45"><a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a><span class="w">      </span><span class="c1">// press on button on IR controller will generate this data 0x40</span>
+</span><span id="__span-5-46"><a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_1</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-5-47"><a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_2</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-5-48"><a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IrReceiver</span><span class="p">.</span><span class="n">decodedIRData</span><span class="p">.</span><span class="n">command</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mh">0x19</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-49"><a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a><span class="w">      </span><span class="c1">// press off button on IR controller will generate this data 0x19</span>
+</span><span id="__span-5-50"><a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_1</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-5-51"><a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a><span class="w">      </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">LED_2</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-5-52"><a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-5-53"><a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-5-54"><a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a><span class="p">}</span>
+</span></code></pre></div>
+Try to press <code>on</code> and <code>off</code> button on IR remote controller and observe the LED
+indicators' status on board. 
+<h3 id="upload-the-sketch-to-arduino-uno-r4-wifi-board">Upload the sketch to Arduino UNO R4 WiFi board.</h3>
+<ul>
+<li>
+<p>Connect the Arduino UNO R4 WiFi board to your computer via USB-C cable on USB port </p>
+</li>
+<li>
+<p>Select the serial device on your arduino IDE and click upload icon as following figure:</p>
+</li>
+</ul>
+<p><img alt="upload sketch" src="../imgs/upload_sketch_basic_4.png"> </p>
+<h3 id="open-serial-monitor-and-observe-it">Open serial monitor and observe it.</h3>
+<p><img alt="openserialmonitor" src="../imgs/open_serial_monitor.png"></p>
+<p>Do remember change baudrate to <code>115200</code>. </p>
+<p><img alt="change baudrate" src="../imgs/change_baudrate.png"></p>
+<p>Serial monitor output:</p>
+<p><img alt="output_infor" src="../imgs/serial_output.png"></p>
+<p>You may try to modify the code in loop section to change the behavior of the LED indicators. </p>
+<h2 id="demo-code-sketch-download">Demo Code Sketch Download</h2>
+<ul>
+<li><a href="../imgs/Basic_4_IR_Remote_control_LEDs.zip">Basic_4_IR_Remote_control_LEDs</a></li>
+</ul>
+<h2 id="demo-video">Demo Video</h2>
+<p><div class="video-container"><iframe src="../imgs/turnon_turnoff_leds.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<hr>
+<h3 id="finally">Finally</h3>
+<ul>
+<li>Try to press <code>on</code> and <code>off</code> button on IR remote controller and observe the LED</li>
+<li>If you can see the LED lights are controlling by IR remote controller means that you have finished this
+task. Let us remove to next chapter. </li>
+</ul></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../basic_usage_3/" class="btn btn-neutral float-left" title="Basic Usage 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../basic_usage_5/" class="btn btn-neutral float-right" title="Basic Usage 5">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../basic_usage_3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../basic_usage_5/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

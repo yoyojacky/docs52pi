@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Setup MQTT container - 52Pi Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Setup MQTT container";
+        var mkdocs_page_input_path = "md/EP-0235/02.setup_mqtt_container.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 52Pi Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">HOME</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0086</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0086/diykitforarduinonanor4/">DIY Beginner Kit Compatible with Arduino Nano R4(Headers)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0083</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/getting-start/">Raspberry Pi Pico 2 WH Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project9/">Project 9</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0084</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0084/projects/">Ultimate Starter Kit for Raspberry Pi Pico 2 WH</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0054</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0054/whatinkit/">Cloud Ready Starter Kit for Arduino UNO R4 WiFi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0069</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/package_includes/">Plant Watering Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/getting_start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_1/">Basic Usage 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_2/">Basic Usage 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_3/">Basic Usage 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_4/">Basic Usage 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_5/">Basic Usage 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_6/">Basic Usage 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/network_configuration/">Networking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/mosquitto_mqtt_broker/">MQTT broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/home_assistant/">HomeAssistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/arduino_cloud/">Arduino Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0073</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/whatinkit/">Education Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0077</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0077/student_starter_kit/">Student Starter Kit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0068</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/whatinkit/">Universal Sensor Kit(TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/">E-Mail</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">52Pi Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Setup MQTT container</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="setup-mqtt-container">Setup MQTT container</h1>
+<h2 id="what-is-an-mqtt-container">What is an MQTT Container?</h2>
+<p>MQTT (Message Queuing Telemetry Transport) is a lightweight messaging protocol for small sensors and mobile devices, optimized for low bandwidth, high latency, or unreliable networks. It facilitates the exchange of messages between devices and is widely used in the Internet of Things (IoT).</p>
+<h2 id="mqtt-container">MQTT Container</h2>
+<p>In the context of MQTT, a container refers to a self-contained environment that encapsulates the MQTT broker and its dependencies. This allows for easy deployment, scalability, and management of MQTT services without the need to install and configure the broker on each individual server.</p>
+<h3 id="key-features-of-mqtt-containers">Key Features of MQTT Containers:</h3>
+<ul>
+<li>
+<p><strong>Isolation</strong>: Containers provide a level of isolation from the host system, ensuring that the MQTT broker runs in a controlled environment with its own set of libraries and configurations.</p>
+</li>
+<li>
+<p><strong>Portability</strong>: Containers can be easily moved across different environments, from development to production, without the risk of encountering compatibility issues.</p>
+</li>
+<li>
+<p><strong>Scalability</strong>: It's straightforward to scale MQTT services horizontally by running multiple instances of the container, which can be managed and orchestrated using container management platforms.</p>
+</li>
+<li>
+<p><strong>Reproducibility</strong>: Containers ensure that the MQTT broker runs in the same environment every time, regardless of where it's deployed, which is crucial for maintaining consistent behavior across different systems.</p>
+</li>
+<li>
+<p><strong>Ease of Management</strong>: Containerization simplifies the management of MQTT brokers, as updates, patches, and configurations can be applied to the container image and then rolled out to all instances.</p>
+</li>
+</ul>
+<h3 id="popular-mqtt-brokers-available-as-containers">Popular MQTT Brokers Available as Containers:</h3>
+<ul>
+<li><strong>Mosquitto</strong>: A popular open-source MQTT broker that is widely available as a container image.</li>
+<li><strong>EMQ X</strong>: A scalable and highly performant MQTT broker that also offers a containerized version.</li>
+<li><strong>RabbitMQ</strong>: Although primarily an AMQP broker, it supports MQTT and can be run in containers.</li>
+</ul>
+<h3 id="how-to-use-mqtt-containers">How to Use MQTT Containers:</h3>
+<ul>
+<li><strong>Pull the Image</strong>: Use a container registry to pull the MQTT broker's container image.</li>
+<li><strong>Run the Container</strong>: Execute the container with the necessary configurations and ports exposed.</li>
+<li><strong>Connect Clients</strong>: MQTT clients can now connect to the broker running inside the container.</li>
+<li><strong>Manage and Scale</strong>: Utilize container orchestration tools like Docker Compose, Kubernetes, or others to manage and scale the MQTT service as needed.</li>
+</ul>
+<p>MQTT containers are a convenient way to deploy and manage MQTT services, providing a flexible and efficient solution for IoT and messaging applications.</p>
+<h3 id="steps">Steps</h3>
+<ul>
+<li>Open a terminal in the desktop you have installed docker service before. </li>
+<li>Create folder as following commands:</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/mosquitto/config
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/mosquitto/data<span class="w"> </span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/opt/mosquitto/log<span class="w"> </span>
+</span></code></pre></div>
+<p><img alt="install mqtt server 1" src="../imgs/mqtt-service-01.png"></p>
+<ul>
+<li>Create <code>mosquitto.conf</code> file. </li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/opt/mosquitto/config/mosquitto.conf
+</span></code></pre></div>
+<p>Configure file sample be like: </p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>listener<span class="w"> </span><span class="m">1883</span><span class="w"> </span><span class="m">0</span>.0.0.0
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>persistence<span class="w"> </span><span class="nb">true</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>persistence_location<span class="w"> </span>/mosquitto/data/
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>log_dest<span class="w"> </span>file<span class="w"> </span>/mosquitto/log/mosquitto.log
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1"># password_file /mosquitto/config/password</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>per_listener_settings<span class="w"> </span><span class="nb">false</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>allow_anonymous<span class="w"> </span><span class="nb">false</span>
+</span></code></pre></div>
+<p><img alt="install mqtt server 2" src="../imgs/mqtt-service-02.png"></p>
+<ul>
+<li>Start docker container </li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>-d<span class="w">  </span>--name<span class="o">=</span>mosquitto<span class="w"> </span>-p<span class="w"> </span><span class="m">1883</span>:1883<span class="w"> </span>-p<span class="w"> </span><span class="m">9001</span>:9001<span class="w"> </span>-v
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>/opt/mosquitto/config:/mosquitto/config<span class="w"> </span>-v<span class="w"> </span>/opt/mosquitto/data:/mosquitto/data
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>-v<span class="w"> </span>/opt/mosquitto/log:/mosquitto/log<span class="w"> </span>eclipse-mosquitto<span class="w"> </span>
+</span></code></pre></div>
+<p>Be like: 
+<img alt="install mqtt server 3" src="../imgs/mqtt-service-03.png"></p>
+<ul>
+<li>It will download docker container and running it automatically.  </li>
+</ul>
+<p><img alt="install mqtt server 4" src="../imgs/mqtt-service-04.png"></p>
+<ul>
+<li>Check container status.</li>
+</ul>
+<p></p><div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a
+</span></code></pre></div>
+Result be like:
+<p><img alt="result of checking" src="../imgs/mqtt-service-05.png"></p>
+<h2 id="change-password-of-mqtt">Change password of MQTT</h2>
+<ul>
+<li>Get into docker via <code>sh</code> shell. </li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>mosquitto<span class="w"> </span>sh<span class="w"> </span>
+</span></code></pre></div>
+<ul>
+<li>Create password file and setting to what you want. </li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>touch<span class="w"> </span>/mosquitto/config/password<span class="w"> </span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>chmod<span class="w"> </span><span class="m">0700</span><span class="w"> </span>/mosquitto/config/password<span class="w"> </span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>mosquitto_passwd<span class="w"> </span>-b<span class="w"> </span>/mosquitto/config/password<span class="w"> </span>YOUR_NAME<span class="w"> </span>YOUR_PASSWORD<span class="w"> </span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="nb">exit</span><span class="w"> </span>
+</span></code></pre></div>
+<p><img alt="settingMQTT" src="../imgs/mqtt-service-06.png"></p>
+<p><img alt="settingMQTT" src="../imgs/mqtt-service-07.png"></p>
+<blockquote>
+<p>NOTE: Please replace <code>YOUR_NAME</code> and <code>YOUR_PASSWORD</code> to your own. </p>
+</blockquote>
+<h2 id="modify-mqtt-configuration-file">Modify MQTT configuration file</h2>
+<p></p><div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo<span class="w"> </span>vim<span class="w"> </span>/opt/mosquitto/config/mosquitto.conf
+</span></code></pre></div>
+Remove the <code>#</code> hash tag from that configuration file:
+<p></p><div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>listener<span class="w"> </span><span class="m">1883</span><span class="w"> </span><span class="m">0</span>.0.0.0
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>persistence<span class="w"> </span><span class="nb">true</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>persistence_location<span class="w"> </span>/mosquitto/data/
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>log_dest<span class="w"> </span>file<span class="w"> </span>/mosquitto/log/mosquitto.log
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>password_file<span class="w"> </span>/mosquitto/config/password
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>per_listener_settings<span class="w"> </span><span class="nb">false</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>allow_anonymous<span class="w"> </span><span class="nb">false</span>
+</span></code></pre></div>
+<img alt="settingMQTT1" src="../imgs/mqtt-service-08.png">
+<h2 id="restart-container">Restart container</h2>
+<p></p><div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>restart<span class="w"> </span>Mosquitto
+</span></code></pre></div>
+<img alt="settingMQTT2" src="../imgs/mqtt-service-09.png">
+<h2 id="congratulations">Congratulations</h2>
+<p>You have installed MQTT container if you've finished previous steps!</p></div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

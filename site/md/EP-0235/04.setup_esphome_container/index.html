@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Setup ESPHome container - 52Pi Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Setup ESPHome container";
+        var mkdocs_page_input_path = "md/EP-0235/04.setup_esphome_container.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 52Pi Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">HOME</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0086</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0086/diykitforarduinonanor4/">DIY Beginner Kit Compatible with Arduino Nano R4(Headers)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0083</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/getting-start/">Raspberry Pi Pico 2 WH Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project9/">Project 9</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0084</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0084/projects/">Ultimate Starter Kit for Raspberry Pi Pico 2 WH</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0054</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0054/whatinkit/">Cloud Ready Starter Kit for Arduino UNO R4 WiFi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0069</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/package_includes/">Plant Watering Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/getting_start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_1/">Basic Usage 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_2/">Basic Usage 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_3/">Basic Usage 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_4/">Basic Usage 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_5/">Basic Usage 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_6/">Basic Usage 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/network_configuration/">Networking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/mosquitto_mqtt_broker/">MQTT broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/home_assistant/">HomeAssistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/arduino_cloud/">Arduino Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0073</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/whatinkit/">Education Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0077</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0077/student_starter_kit/">Student Starter Kit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0068</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/whatinkit/">Universal Sensor Kit(TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/">E-Mail</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">52Pi Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>Setup ESPHome container</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="setup-esphome-container">Setup ESPHome container</h1>
+<h2 id="what-is-an-esphome-container">What is an ESPHome Container?</h2>
+<p>ESPHome is an open-source system designed for controlling ESP8266/ESP32 and similar microcontrollers through simple yet powerful configuration files. When run in a Docker container, it allows for the creation of custom firmware for these devices, which can then be integrated into Home Automation systems like Home Assistant.</p>
+<h2 id="advantages-of-esphome-containers">Advantages of ESPHome Containers</h2>
+<ul>
+<li><strong>Isolation</strong>: Containers provide a secure environment where ESPHome runs independently of the host system, reducing the risk of conflicts and ensuring consistent behavior across different platforms.</li>
+<li><strong>Portability</strong>: ESPHome containers can be easily moved and deployed across different systems, making it simple to maintain the same setup on multiple devices.</li>
+<li><strong>Scalability</strong>: Docker containers can be scaled up or down as needed, allowing for efficient use of system resources and the ability to handle an increasing number of devices.</li>
+<li><strong>Version Control</strong>: By using container images, you can ensure that you are always running the same version of ESPHome, which is crucial for maintaining stability and reproducibility.</li>
+<li><strong>Ease of Use</strong>: ESPHome containers can simplify the installation and update process, as Docker handles the dependencies and environment setup automatically.</li>
+</ul>
+<h2 id="how-to-use-esphome-containers">How to Use ESPHome Containers</h2>
+<p>To use ESPHome in a Docker container, follow these general steps:</p>
+<ul>
+<li><strong>Install Docker</strong>: Ensure that Docker is installed on your system. You can find installation instructions on the Docker website.</li>
+<li><strong>Pull the ESPHome Image</strong>: Use Docker to pull the official ESPHome image from the Docker Hub.</li>
+<li><strong>Create a Configuration Directory</strong>: Set up a directory on your host system to store your ESPHome configuration files.</li>
+<li><strong>Run the ESPHome Container</strong>: Use Docker Compose or the Docker CLI to run the ESPHome container, mounting your configuration directory into the container.</li>
+<li><strong>Access the ESPHome Dashboard</strong>: Once the container is running, you can access the ESPHome dashboard through your web browser to manage your devices.</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>Create folder</li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-pv<span class="w"> </span>/opt/esphome/<span class="w"> </span>
+</span></code></pre></div>
+<ul>
+<li>Install docker container </li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>esphome<span class="w"> </span>-v<span class="w"> </span>/opt/esphome:/config<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">         </span>-v<span class="w"> </span>/etc/localtime:/etc/localtime:ro<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">         </span>--restart<span class="w"> </span>always<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">         </span>--privileged<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">         </span>--network<span class="w"> </span>host<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">         </span>-e<span class="w"> </span><span class="nv">USERNAME</span><span class="o">=</span>YOUR_NAME<span class="w"> </span><span class="se">\ </span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">         </span>-e<span class="w"> </span><span class="nv">PASSWORD</span><span class="o">=</span>YOUR_PASSWORD<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">         </span>ghcr.io/esphome/esphome<span class="w"> </span>
+</span></code></pre></div>
+<p><img alt="esphome installation" src="../imgs/esphome-install-01.png"></p>
+<h2 id="check-docker-status">Check docker status</h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>docker<span class="w"> </span>ps<span class="w"> </span>-a<span class="w"> </span>
+</span></code></pre></div>
+<p><img alt="esphome installation" src="../imgs/esphome-install-02.png"></p>
+<h2 id="access-esphome-from-web-browser">Access ESPHome from web browser</h2>
+<ul>
+<li>
+<p>Open a browser and input the IP address of you docker server and Default port:
+<code>6052</code>, Create your new device in the page.</p>
+</li>
+<li>
+<p>Login with the <code>USERNAME</code> and <code>PASSWORD</code> which has been setup before.  </p>
+</li>
+</ul>
+<p><img alt="esphome installation" src="../imgs/esphome-install-03.png"></p>
+<ul>
+<li>Create new device </li>
+</ul>
+<p><img alt="esphome installation" src="../imgs/esphome-install-04.png"></p>
+<p>Please input your device name and your 2.4GHz Network SSID and Password.</p>
+<p><img alt="esphome installation" src="../imgs/esphome-install-05.png"></p>
+<ul>
+<li>Connect to ESP32S3 board to your Computer in USB port. </li>
+<li>Click connect </li>
+</ul>
+<p><img alt="esphome installation" src="../imgs/esphome-install-06.png"></p>
+<ul>
+<li>Select the serial port </li>
+</ul>
+<p><img alt="esphome installation" src="../imgs/esphome-install-07.png"></p>
+<p><img alt="esphome installation" src="../imgs/esphome-install-08.png"></p>
+<ul>
+<li>It will pop up a screen, you need to double click the <code>Encryptionkey</code> and
+store it to a safe place, and then click <code>INSTALL</code></li>
+</ul>
+<p><img alt="esphome installation" src="../imgs/esphome-install-09.png"></p>
+<ul>
+<li>At the first time, You <code>must</code> select <code>Manual download</code>.</li>
+</ul>
+<p><img alt="esphome installation" src="../imgs/esphome-install-10.png"></p>
+<p>It will download the libraries and compiler tools automatically. </p>
+<p><img alt="esphome installation" src="../imgs/esphome-install-11.png"></p>
+<p><img alt="esphome installation" src="../imgs/esphome-install-12.png"></p>
+<ul>
+<li>At the first time, you need to select Factory format 
+as following figure:</li>
+</ul>
+<p><img alt="esphome installation" src="../imgs/esphome-install-13.png"></p>
+<p>and then, you will be able to download a firmware from web browser.
+It's a binary format file. you can upload it to your ESP32S3 device via several
+methods.</p>
+<p><img alt="esphome installation" src="../imgs/esphome-install-14.png"></p>
+<h2 id="upload-factory-format-firmware">Upload factory format firmware.</h2>
+<ul>
+<li>Window system </li>
+</ul>
+<p>Download: <a href="../assets/flash_download_tool_3.9.7_1.zip">flash_download_tool_3.9.1_1.zip</a> 
+<br>
+Unzip and double click the icon. </p>
+<p><img alt="windows flash tool" src="../imgs/flash-tool-01.png"></p>
+<ul>
+<li>Chip type: ESP32-S3, workMode: Develop, LoadMode: UART, and then click <code>ok</code>.</li>
+</ul>
+<p><img alt="windows flash tool" src="../imgs/flash-tool-02.png"></p>
+<ul>
+<li>Select the firmware you want to upload, address use: <code>0</code>, select the COM port.
+and then click <code>START</code> icon to upload the firmware.</li>
+</ul>
+<p><img alt="windows flash tool" src="../imgs/flash-tool-03.png"></p>
+<p><img alt="windows flash tool" src="../imgs/flash-tool-04.png"></p>
+<ul>
+<li>Linux system(include Raspberry Pi OS 64bit bookworm) </li>
+</ul>
+<p>To flash ESPHome firmware with esptools first install esptools.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip<span class="w"> </span>install<span class="w"> </span>esptool<span class="w"> </span>
+</span></code></pre></div>
+<p><img alt="linux flash tool" src="../imgs/flash-tool-05.png"></p>
+<ul>
+<li>Check if can read MAC address of ESP32S3 development board. </li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>esptool.py<span class="w"> </span>--chip<span class="w"> </span>esp32s3<span class="w"> </span>--port<span class="w"> </span>/dev/ttyUSB0<span class="w">  </span>read_mac<span class="w"> </span>
+</span></code></pre></div>
+<p><img alt="linux flash tool" src="../imgs/flash-tool-06.png"></p>
+<p>Connect the ESP via USB to the PC. Monitor journalctl to know what TTY is used:
+and then upload the firmware by following command:
+</p><div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>journalctl<span class="w"> </span>--follow
+</span></code></pre></div>
+<img alt="journalctl-follow" src="../imgs/journelctl_follow.png">
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>esptool.py<span class="w"> </span>--chip<span class="w"> </span>esp32s3<span class="w"> </span>--port<span class="w"> </span>/dev/ttyUSB0<span class="w"> </span>write_flash<span class="w"> </span>0x0<span class="w"> </span>YOUR_FIRMWARE<span class="w">  </span>
+</span></code></pre></div>
+<blockquote>
+<p>NOTE: please replace <code>YOUR_FIRMWARE</code> to the firmware you download before. 
+For example:
+In my case, firmware called: <code>52pi-iot-node.factory.bin</code></p>
+</blockquote>
+<p><img alt="linux flash tool" src="../imgs/flash-tool-08.png"></p>
+<h2 id="check-online-status">Check Online status</h2>
+<p>Once the firmware upload successfully, refresh the browser you will find that
+    the device is online now! </p>
+<p><img alt="linux flash tool" src="../imgs/flash-tool-09.png"></p>
+<p>Right now, you can move to next step or read more about <code>esptool</code> below:</p>
+<hr>
+<p>More information about <code>esptool</code>: <a href="https://github.com/espressif/esptool">esptool github</a></p></div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

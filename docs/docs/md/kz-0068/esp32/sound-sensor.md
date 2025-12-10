@@ -1,1 +1,0 @@
-sound-sensor.md

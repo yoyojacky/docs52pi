@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>CAN NODE Temperature Sensor Module - 52Pi Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "CAN NODE Temperature Sensor Module";
+        var mkdocs_page_input_path = "md/EP-0244/can_node_temperature_sensor_module.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 52Pi Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">HOME</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0086</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0086/diykitforarduinonanor4/">DIY Beginner Kit Compatible with Arduino Nano R4(Headers)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0083</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/getting-start/">Raspberry Pi Pico 2 WH Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project9/">Project 9</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0084</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0084/projects/">Ultimate Starter Kit for Raspberry Pi Pico 2 WH</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0054</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0054/whatinkit/">Cloud Ready Starter Kit for Arduino UNO R4 WiFi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0069</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/package_includes/">Plant Watering Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/getting_start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_1/">Basic Usage 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_2/">Basic Usage 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_3/">Basic Usage 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_4/">Basic Usage 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_5/">Basic Usage 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_6/">Basic Usage 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/network_configuration/">Networking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/mosquitto_mqtt_broker/">MQTT broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/home_assistant/">HomeAssistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/arduino_cloud/">Arduino Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0073</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/whatinkit/">Education Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0077</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0077/student_starter_kit/">Student Starter Kit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0068</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/whatinkit/">Universal Sensor Kit(TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/">E-Mail</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">52Pi Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+      <li>CAN NODE Temperature Sensor Module</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="can-node-temperature-sensor-module">CAN NODE Temperature Sensor Module</h1>
+<h2 id="about-the-product">About the Product</h2>
+<ul>
+<li>Product SKU: EP-0244</li>
+<li>Product Name: CAN NODE Temperature Sensor Module </li>
+</ul>
+<h2 id="description">Description</h2>
+<p>The CAN NODE Temperature module is a sophisticated device designed for temperature monitoring and control within networked systems. </p>
+<h2 id="features">Features</h2>
+<ol>
+<li>
+<p><strong>Ethernet Connectivity</strong>: Equipped with an RJ-45 port, facilitating easy integration into Ethernet-based networks.</p>
+</li>
+<li>
+<p><strong>Standard Compliant Cabling</strong>: Compatible with both EIA/TIA568A and EIA/TIA568B wiring standards, ensuring broad compatibility with existing network infrastructure.</p>
+</li>
+<li>
+<p><strong>Wide Operating Voltage Range</strong>: Operates on a DC voltage between 4.95V and 5.5V, providing flexibility in power supply options.</p>
+</li>
+<li>
+<p><strong>Low Power Consumption</strong>: Consumes a modest 0.2A of current, making it energy-efficient and suitable for battery-operated environments.</p>
+</li>
+<li>
+<p><strong>Advanced MCU</strong>: Powered by the CH32V203G6U6 chipset from WCH, offering robust processing capabilities for complex tasks.</p>
+</li>
+<li>
+<p><strong>Reliable CAN Communication</strong>: Utilizes the TJA1051T/3 chipset for reliable CAN bus communication, essential for real-time data exchange in networked systems.</p>
+</li>
+<li>
+<p><strong>High-Precision Temperature Sensing</strong>: Features the NXP LM75B temperature sensor with a resolution of 0.125℃, allowing for precise temperature measurements.</p>
+</li>
+<li>
+<p><strong>Broad Temperature Monitoring Range</strong>: Capable of monitoring temperatures from -40℃ to 80℃, suitable for a wide range of environments and applications.</p>
+</li>
+<li>
+<p><strong>Built-in CAN Termination</strong>: Includes a 120-ohm termination resistor to ensure signal integrity over long bus lengths.</p>
+</li>
+<li>
+<p><strong>Dynamic Message ID Generation</strong>: The CAN message ID is dynamically generated by the MCU's UUID1, providing a unique identifier for each message (ESIG register R32_ESIG_UNIID1).</p>
+</li>
+<li>
+<p><strong>Edge Network Compatibility</strong>: Designed with a termination pin that, when shorted, ensures proper signal termination when the module is the last one on the network edge.</p>
+</li>
+</ol>
+<h2 id="specifications">Specifications</h2>
+<ul>
+<li><strong>Ethernet Connection</strong>: RJ-45</li>
+<li><strong>Ethernet Cable Standard</strong>: EIA/TIA568A-to-EIA/TIA568A or EIA/TIA568B-to-EIA/TIA568B</li>
+<li><strong>Work Voltage</strong>: DC 4.95~5.5V</li>
+<li><strong>Work Current</strong>: 0.02A</li>
+<li><strong>MCU Chipset</strong>: CH32V203G6U6</li>
+<li><strong>MCU Brand</strong>: WCH</li>
+<li><strong>CAN Chipset</strong>: TJA1051T/3</li>
+<li><strong>Temperature Sensor</strong>: NXP LM75B</li>
+<li><strong>Temperature Resolution</strong>: 0.125℃</li>
+<li><strong>Temperature Range</strong>: -40~80℃</li>
+<li><strong>CAN Termination Resistor</strong>: 120 ohm</li>
+<li><strong>CAN MSG ID</strong>: Generated by MCU's UUID1 as Message ID (ESIG register R32_ESIG_UNIID1)</li>
+</ul>
+<h3 id="additional-notes">Additional Notes</h3>
+<ul>
+<li><strong>Termination Pin Requirement</strong>: The Termination Pin of the CAN NODE Temperature module must be shorted when this CAN NODE is the last module on the edge network.</li>
+</ul>
+<h2 id="rj-45-pinout">RJ-45 Pinout</h2>
+<ul>
+<li>Detials on soldering pads</li>
+</ul>
+<p><img alt="RJ-45 pinout 4" src="../imgs/EP-0244-pinout-04.jpg"></p>
+<p><img alt="RJ-45 pinout 1" src="../imgs/EP-0244-pinout-01.jpg"></p>
+<ul>
+<li>Schamatic drawing</li>
+</ul>
+<p><img alt="RJ-45 pinout 2" src="../imgs/EP-0244-pinout-02.jpg"></p>
+<ul>
+<li>Pinning for RJ45 connector </li>
+</ul>
+<p><img alt="RJ-45 pinout 3" src="../imgs/EP-0244-Pinout-03.png"></p></div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

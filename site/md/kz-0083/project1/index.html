@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Project 1 - 52Pi Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Project 1";
+        var mkdocs_page_input_path = "md/kz-0083/project1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 52Pi Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">HOME</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0086</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0086/diykitforarduinonanor4/">DIY Beginner Kit Compatible with Arduino Nano R4(Headers)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0083</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-start/">Raspberry Pi Pico 2 WH Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Project 1</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ok-lets-build-our-first-diagram-and-start-coding">OK, let’s build our first diagram and start coding.</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#raspberry-pi-pico-2w-pinout">Raspberry Pi Pico 2W Pinout</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware-requirements">Hardware Requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wiring-diagram">Wiring Diagram</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#open-thonny-ide-and-input-the-following-demo-code">Open Thonny IDE and input the following demo code:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#code-explanations">Code Explanations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#the-machine-library-in-micropython">The machine Library in MicroPython</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project9/">Project 9</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0084</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0084/projects/">Ultimate Starter Kit for Raspberry Pi Pico 2 WH</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0054</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0054/whatinkit/">Cloud Ready Starter Kit for Arduino UNO R4 WiFi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0069</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/package_includes/">Plant Watering Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/getting_start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_1/">Basic Usage 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_2/">Basic Usage 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_3/">Basic Usage 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_4/">Basic Usage 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_5/">Basic Usage 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_6/">Basic Usage 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/network_configuration/">Networking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/mosquitto_mqtt_broker/">MQTT broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/home_assistant/">HomeAssistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/arduino_cloud/">Arduino Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0073</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/whatinkit/">Education Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0077</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0077/student_starter_kit/">Student Starter Kit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0068</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/whatinkit/">Universal Sensor Kit(TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/">E-Mail</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">52Pi Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>KZ-0083 &raquo;</li>
+      <li>Project 1</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="project-1-blinking-led">Project 1: Blinking LED</h1>
+<p>First and foremost, let's introduce the LED lights. LED, which stands for Light Emitting Diode, is a fundamental component in electronics. By controlling LED lights, you can learn several valuable skills and concepts:</p>
+<ol>
+<li><strong>Basic Electronics</strong>: Understanding how diodes work, current flow, and the role of semiconductors in controlling electrical current.</li>
+<li><strong>Circuit Building</strong>: Learning how to construct simple circuits that include LEDs, resistors, and power sources.</li>
+<li><strong>Component Identification</strong>: Recognizing different types of LEDs and their characteristics, such as color, brightness, and size.</li>
+<li><strong>Wiring Techniques</strong>: Mastering the art of soldering and connecting components securely and efficiently.</li>
+<li><strong>Voltage and Current</strong>: Exploring the relationship between voltage, current, and resistance, which is fundamental to all electronic circuits.</li>
+<li><strong>PWM (Pulse Width Modulation)</strong>: Discovering how to control the brightness of LEDs using PWM, a technique that is widely used in various applications.</li>
+<li><strong>Logic Gates and Control</strong>: Introducing the concept of logic gates and how they can be used to control LED lights in more complex circuits.</li>
+<li><strong>Troubleshooting</strong>: Developing the ability to identify and fix common issues in electronic circuits, which is a critical skill for any electronics enthusiast.</li>
+<li><strong>Creative Expression</strong>: Using LEDs in projects to create visual effects, such as blinking patterns, fading, or color mixing.</li>
+<li><strong>Energy Efficiency</strong>: Appreciating the benefits of LEDs over traditional lighting, such as their lower power consumption and longer lifespan.</li>
+</ol>
+<p>By starting with LED lights, you're beginning at the foundation of electronic projects. As you progress, these basic skills will build upon each other, enabling you to tackle more complex challenges and create innovative solutions.</p>
+<hr>
+<h2 id="ok-lets-build-our-first-diagram-and-start-coding">OK, let’s build our first diagram and start coding.</h2>
+<h3 id="raspberry-pi-pico-2w-pinout">Raspberry Pi Pico 2W Pinout</h3>
+<p><img alt="diagram" src="../imgs/kz-0083-p103.png"></p>
+<h3 id="hardware-requirements">Hardware Requirements</h3>
+<ul>
+<li>1 x Breadboard</li>
+<li>1 x Raspberry Pi Pico 2 W board</li>
+<li>1 x LED indicator (red/green/blue color as you like)</li>
+<li>1 x 220ohm Resistor</li>
+<li>2 x Male-to-male jumper wire</li>
+<li>1 x MicroUSB programming cable</li>
+</ul>
+<h3 id="wiring-diagram">Wiring Diagram</h3>
+<table>
+<thead>
+<tr>
+<th>LED Indicator</th>
+<th>Raspberry Pi Pico 2W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Short Leg (negative)</td>
+<td>GND Pin</td>
+</tr>
+<tr>
+<td>Long Leg (Positive) connect to 220ohm Resistor one leg</td>
+<td>GP15 connect to other leg of resistor</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="pinout" src="../imgs/kz-0083-p102.png"></p>
+<hr>
+<h2 id="open-thonny-ide-and-input-the-following-demo-code">Open Thonny IDE and input the following demo code:</h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">Pin</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Define LED indicator</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">led_pin</span> <span class="o">=</span> <span class="n">Pin</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">Pin</span><span class="o">.</span><span class="n">OUT</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Loop</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">led_pin</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"LED ON"</span><span class="p">)</span> 
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">led_pin</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">sleep</span><span class="p">(</span><span class="mf">0.5</span><span class="p">)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="nb">print</span><span class="p">(</span><span class="s2">"LED OFF"</span><span class="p">)</span>
+</span></code></pre></div>
+<p><img alt="code" src="../imgs/kz-0083-p104.png"></p>
+<p>Click the play icon on the menu. Do you see the LED is blinking?</p>
+<p><img alt="icon" src="../imgs/kz-0083-p105.png"></p>
+<p><img alt="status" src="../imgs/kz-0083-p101.png"></p>
+<p>The shell will display the status of the LED indicator like this:</p>
+<p><img alt="status" src="../imgs/kz-0083-p106.png"></p>
+<h3 id="code-explanations">Code Explanations</h3>
+<ul>
+<li>Here's what the code does:</li>
+</ul>
+<p>It imports the Pin class from the machine module, which provides an interface to control the microcontroller's GPIO (General Purpose Input/Output) pins. It also imports the sleep function from the time module, which is used to pause the execution of the program for a specified amount of time.
+It defines an LED indicator by creating a Pin object called led_pin. </p>
+<p>The pin number used is 15, and it is configured as an output pin (Pin.OUT), meaning it will be used to control the flow of electricity to an external device (in this case, an LED).
+The code enters an infinite loop (while True:), which will continue to execute until the program is manually stopped or the device is reset.</p>
+<p>Inside the loop, it sets the value of led_pin to 1 (which is typically HIGH or 3.3V on most microcontrollers), turning the LED on.
+It then calls sleep(0.5), which pauses the program for 0.5 seconds, allowing the LED to remain on for that duration.</p>
+<p>After the sleep, it prints "LED ON" to the console to indicate that the LED is currently on.</p>
+<p>Next, it sets the value of led_pin to 0 (which is typically LOW or 0V), turning the LED off.</p>
+<p>It calls sleep(0.5) again to pause for another 0.5 seconds, allowing the LED to remain off for that duration.</p>
+<p>After the sleep, it prints "LED OFF" to the console to indicate that the LED is currently off.</p>
+<p>The loop then repeats, causing the LED to blink on and off with a 0.5-second interval between changes.</p>
+<h3 id="the-machine-library-in-micropython">The machine Library in MicroPython</h3>
+<p>The machine library in MicroPython provides a way to access and control the hardware peripherals of the microcontroller. It includes modules for controlling GPIO pins, PWM (Pulse Width Modulation), ADC (Analog to Digital Conversion), UART (Universal Asynchronous Receiver-Transmitter), I2C (Inter-Integrated Circuit), SPI (Serial Peripheral Interface), and more.
+The purpose of the machine library is to provide a Python interface to these hardware features, allowing developers to write Python code that interacts directly with the microcontroller's hardware. This makes it easier to develop embedded applications and control hardware devices without needing to write low-level code in languages like C or assembly.
+In the context of this code, the machine library is used to control a GPIO pin, which is connected to an LED. By using the Pin class, the code can easily set the pin's mode (input or output) and its value (high or low), which in turn controls the state of the LED.</p></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../getting-start/" class="btn btn-neutral float-left" title="Raspberry Pi Pico 2 WH Starter Kit"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project2/" class="btn btn-neutral float-right" title="Project 2">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../getting-start/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

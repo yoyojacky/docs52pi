@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Basic Usage 6 - 52Pi Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Basic Usage 6";
+        var mkdocs_page_input_path = "md/kz-0069/basic_usage_6.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 52Pi Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">HOME</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0086</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0086/diykitforarduinonanor4/">DIY Beginner Kit Compatible with Arduino Nano R4(Headers)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0083</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/getting-start/">Raspberry Pi Pico 2 WH Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project9/">Project 9</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0084</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0084/projects/">Ultimate Starter Kit for Raspberry Pi Pico 2 WH</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0054</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0054/whatinkit/">Cloud Ready Starter Kit for Arduino UNO R4 WiFi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0069</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../package_includes/">Plant Watering Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_1/">Basic Usage 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_2/">Basic Usage 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_3/">Basic Usage 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_4/">Basic Usage 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_5/">Basic Usage 5</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Basic Usage 6</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#lights-up-13-inch-tft-rgb-240x240-pixels-display-on-board">Lights up 1.3 inch TFT RGB 240x240 pixels Display on board</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hardware-overview">Hardware Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ir-receiver-position-on-board">IR Receiver position on board</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pinout-chart">Pinout Chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#circuit-diagram">Circuit Diagram</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-the-shield">Connecting the Shield</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#programming">Programming</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#install-tft_espi-library">Install TFT_eSPI library</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#modify-the-tft_espi-librarys-configure">Modify the TFT_eSPI library's configure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#import-header-files">Import header files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#define-the-soil-moisture-sensor-pin">Define the Soil moisture sensor pin</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create-instance-of-tft-display">Create instance of TFT display.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#define-meters-for-the-moisture-sensor">define meters for the moisture Sensor.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initializing-pin-mode">Initializing Pin Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#modify-loop-section">Modify loop section</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#demo-code-examples">Demo code examples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#explaination-of-the-demo-code">Explaination of the demo code</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#upload-the-sketch-to-arduino-uno-r4-wifi-board">Upload the sketch to Arduino UNO R4 WiFi board.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#observe-the-needle-on-tft-screen">Observe the needle on TFT screen.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo-code-sketch-download">Demo Code Sketch Download</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo-video">Demo Video</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#finally">Finally</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../network_configuration/">Networking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mosquitto_mqtt_broker/">MQTT broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../home_assistant/">HomeAssistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arduino_cloud/">Arduino Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0073</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/whatinkit/">Education Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0077</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0077/student_starter_kit/">Student Starter Kit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0068</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/whatinkit/">Universal Sensor Kit(TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/">E-Mail</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">52Pi Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>KZ-0069 &raquo;</li>
+      <li>Basic Usage 6</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="basic-usage-6">Basic Usage 6</h1>
+<h2 id="lights-up-13-inch-tft-rgb-240x240-pixels-display-on-board">Lights up 1.3 inch TFT RGB 240x240 pixels Display on board</h2>
+<p>Next, we will use the onboard TFT display to show some basic informations.</p>
+<p>OK, let’s begin the basic learning. </p>
+<h2 id="hardware-overview">Hardware Overview</h2>
+<p>The shield provides the following interfaces:</p>
+<ul>
+<li>3 x Soil Moisture Sensors (Analog Inputs A0, A1, A2)</li>
+<li>3 x NTC Temperature Sensors (Analog Inputs A4, A5, A6)</li>
+<li>3 x 3.3V Relay Modules (Digital Outputs 2, 3, 4)</li>
+<li>3 x Mini Water Pumps</li>
+<li>1 x 1.3-inch IPS RGB TFT Screen (ST7789 Controller)</li>
+<li>1 x IR receiver </li>
+<li>1 x IR remote controller
+<font color="red">NOTE: you may need to purchase battery for the IR remote controller. </font></li>
+</ul>
+<h2 id="ir-receiver-position-on-board">IR Receiver position on board</h2>
+<ul>
+<li>IR receiver </li>
+</ul>
+<p><img alt="IR_receiver" src="../imgs/ir-receiver.jpg"> </p>
+<ul>
+<li>IR remote controller</li>
+</ul>
+<p><img alt="IR_remote_controller" src="../imgs/IR-Remote-controller.jpg"> </p>
+<ul>
+<li>TFT screen onboard </li>
+</ul>
+<p><img alt="tft_screen" src="../imgs/tft-screen.jpg"></p>
+<ul>
+<li>The screen in the middle </li>
+</ul>
+<p><img alt="tft_screen" src="../imgs/tft_display.jpg"></p>
+<h2 id="pinout-chart">Pinout Chart</h2>
+<ul>
+<li>Details of the expansion board.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Plant Watering Kit Hat Board</th>
+<th align="center">Arduino UNO R4 WiFi Board</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><font color="Green">HUMI3 </font></td>
+<td align="center"><font color="green">A0</font></td>
+</tr>
+<tr>
+<td align="center"><font color="Green">HUMI2 </font></td>
+<td align="center"><font color="green">A1</font></td>
+</tr>
+<tr>
+<td align="center"><font color="Green">HUMI1 </font></td>
+<td align="center"><font color="green">A2</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP3</font></td>
+<td align="center"><font color="BROWN">A3</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP2</font></td>
+<td align="center"><font color="BROWN">A4</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP1 </font></td>
+<td align="center"><font color="BROWN">A5</font></td>
+</tr>
+<tr>
+<td align="center"><font color="red">IR_RSV</font></td>
+<td align="center"><font color="red">D5</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 1</font></td>
+<td align="center"><font color="blue">D2</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 2</font></td>
+<td align="center"><font color="blue">D3</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 3</font></td>
+<td align="center"><font color="blue">D4</font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_SCLK </font></td>
+<td align="center"><font color="pink">D13 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_MOSI</font></td>
+<td align="center"><font color="pink">D11 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_CS </font></td>
+<td align="center"><font color="pink">D10 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_DC </font></td>
+<td align="center"><font color="pink">D9 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_RST </font></td>
+<td align="center"><font color="pink">D8 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="red"> RX</font></td>
+<td align="center"><font color="red">TX-&gt;1 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="red"> TX</font></td>
+<td align="center"><font color="red">RX&lt;-0 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="green">Green LED </font></td>
+<td align="center"><font color="green">D6</font></td>
+</tr>
+<tr>
+<td align="center"><font color="red">Red LED</font></td>
+<td align="center"><font color="red">D7</font></td>
+</tr>
+</tbody>
+</table>
+<h2 id="circuit-diagram">Circuit Diagram</h2>
+<p><img alt="circuit Diagram" src="../imgs/plant_watering_kit_board_diagram.png"></p>
+<h2 id="connecting-the-shield">Connecting the Shield</h2>
+<ul>
+<li>place the arduino uno r4 on a flat surface.</li>
+<li>align the shield with the headers of the arduino board and gently press it down until it clicks into place.</li>
+<li>plug the plant watering hat board on top of arduino uno r4 on gpio pins. </li>
+</ul>
+<h2 id="programming">Programming</h2>
+<p>Open arduino IDE and create a new sketch by clicking <code>file</code>-&gt; <code>New Sketch</code> </p>
+<p><img alt="new sketch" src="../imgs/pwk01.png"></p>
+<h2 id="install-tft_espi-library">Install TFT_eSPI library</h2>
+<ul>
+<li>Click <code>book</code> icon to open library manager and then input <code>TFT_eSPI</code>, install
+library as following figure.</li>
+</ul>
+<p><img alt="install library" src="../imgs/install_tft_espi_library.png"></p>
+<ul>
+<li>Install <code>TFT_eWidget</code> library. </li>
+</ul>
+<p><img alt="install library2" src="../imgs/install_tft_eWidget.png"></p>
+<h2 id="modify-the-tft_espi-librarys-configure">Modify the TFT_eSPI library's configure</h2>
+<ul>
+<li>
+<p>Navigate to Arduino IDE installation location and find the <code>libraries</code> folder</p>
+</li>
+<li>
+<p>Modify <code>user_setup.h</code> configure file's following lines, make sure you have
+following parameters in that file:</p>
+</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define ST7789_DRIVER  </span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#define TFT_RGB_ORDER TFT_BGR</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#define TFT_WIDTH 240</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cp">#define TFT_HIGHT 240</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">#define TFT_MOSI  12 </span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="cp">#define TFT_MISO  11 </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="cp">#define TFT_SCLK  13 </span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="cp">#define TFT_CS    10 </span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="cp">#define TFT_DC     9</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="cp">#define TFT_RST    8</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="cp">#define SPI_FREQUENCY  27000000</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="cp">#define SPI_READ_FREQUENCY  20000000</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="cp">#define SPI_TOUCH_FREQUENCY  2500000</span>
+</span></code></pre></div>
+<h3 id="import-header-files">Import header files</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;TFT_eSPI.h&gt;</span><span class="c1">     // Hardware-specific library</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;TFT_eWidget.h&gt;</span><span class="c1">  // Widget library</span>
+</span></code></pre></div>
+<h3 id="define-the-soil-moisture-sensor-pin">Define the Soil moisture sensor pin</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#define moisture_1 A2 </span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cp">#define moisture_2 A1 </span>
+</span></code></pre></div>
+<h3 id="create-instance-of-tft-display">Create instance of TFT display.</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1">// create instance of TFT display</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="n">TFT_eSPI</span><span class="w"> </span><span class="n">tft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TFT_eSPI</span><span class="p">();</span>
+</span></code></pre></div>
+<h3 id="define-meters-for-the-moisture-sensor">define meters for the moisture Sensor.</h3>
+<ul>
+<li>rh1 for moisture_1, rh2 for moisture_2.</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="n">MeterWidget</span><span class="w"> </span><span class="n">rh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MeterWidget</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tft</span><span class="p">);</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">MeterWidget</span><span class="w"> </span><span class="n">rh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MeterWidget</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tft</span><span class="p">);</span>
+</span></code></pre></div>
+<h3 id="initializing-pin-mode">Initializing Pin Mode</h3>
+<p>Set the pin direction to <code>OUTPUT</code> in setup function sector.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span><span class="w"> </span><span class="c1">// note the baudrate is changed to 115200 </span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="c1">// init tft display and clear screen</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">tft</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">tft</span><span class="p">.</span><span class="n">setRotation</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="n">tft</span><span class="p">.</span><span class="n">fillScreen</span><span class="p">(</span><span class="n">TFT_WHITE</span><span class="p">);</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="c1">// setting meters parameters for soil moisture</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">rh1</span><span class="p">.</span><span class="n">setZones</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="n">rh1</span><span class="p">.</span><span class="n">analogMeter</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w"> </span><span class="s">"CH1"</span><span class="p">,</span><span class="w"> </span><span class="s">"DRY"</span><span class="p">,</span><span class="w"> </span><span class="s">"DRY"</span><span class="p">,</span><span class="w"> </span><span class="s">"MID"</span><span class="p">,</span><span class="w"> </span><span class="s">"WET"</span><span class="p">,</span><span class="w"> </span><span class="s">"WET"</span><span class="p">);</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="w">    </span><span class="n">rh2</span><span class="p">.</span><span class="n">setZones</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="w">    </span><span class="n">rh2</span><span class="p">.</span><span class="n">analogMeter</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w"> </span><span class="s">"CH1"</span><span class="p">,</span><span class="w"> </span><span class="s">"DRY"</span><span class="p">,</span><span class="w"> </span><span class="s">"DRY"</span><span class="p">,</span><span class="w"> </span><span class="s">"MID"</span><span class="p">,</span><span class="w"> </span><span class="s">"WET"</span><span class="p">,</span><span class="w"> </span><span class="s">"WET"</span><span class="p">);</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="modify-loop-section">Modify loop section</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">value_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">moisture_1</span><span class="p">);</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">value_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">moisture_2</span><span class="p">);</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="n">rh1</span><span class="p">.</span><span class="n">updateNeedle</span><span class="p">((</span><span class="mi">100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value_1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10.24</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="n">rh2</span><span class="p">.</span><span class="n">updateNeedle</span><span class="p">((</span><span class="mi">100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value_2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10.24</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="demo-code-examples">Demo code examples</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;TFT_eSPI.h&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;TFT_eWidget.h&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="cp">#define moisture_1 A2</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="cp">#define moisture_2 A1</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="c1">// create instance of TFT display</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="n">TFT_eSPI</span><span class="w"> </span><span class="n">tft</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TFT_eSPI</span><span class="p">();</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="c1">// define meters rh1 - moisture_1 , rh2 - moisture_2</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="n">MeterWidget</span><span class="w"> </span><span class="n">rh1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MeterWidget</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tft</span><span class="p">);</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="n">MeterWidget</span><span class="w"> </span><span class="n">rh2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">MeterWidget</span><span class="p">(</span><span class="o">&amp;</span><span class="n">tft</span><span class="p">);</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">  </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">115200</span><span class="p">);</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">  </span><span class="c1">// init tft display and clear screen</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">begin</span><span class="p">();</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">setRotation</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">  </span><span class="n">tft</span><span class="p">.</span><span class="n">fillScreen</span><span class="p">(</span><span class="n">TFT_WHITE</span><span class="p">);</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">  </span><span class="c1">// setting meters parameters for soil moistures</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">  </span><span class="n">rh1</span><span class="p">.</span><span class="n">setZones</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">  </span><span class="n">rh1</span><span class="p">.</span><span class="n">analogMeter</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w"> </span><span class="s">"CH1"</span><span class="p">,</span><span class="w"> </span><span class="s">"DRY"</span><span class="p">,</span><span class="w"> </span><span class="s">"DRY"</span><span class="p">,</span><span class="w"> </span><span class="s">"MID"</span><span class="p">,</span><span class="w"> </span><span class="s">"WET"</span><span class="p">,</span><span class="w"> </span><span class="s">"WET"</span><span class="p">);</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">  </span><span class="n">rh2</span><span class="p">.</span><span class="n">setZones</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">);</span>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">  </span><span class="n">rh2</span><span class="p">.</span><span class="n">analogMeter</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">,</span><span class="w"> </span><span class="s">"CH2"</span><span class="p">,</span><span class="w"> </span><span class="s">"DRY"</span><span class="p">,</span><span class="w"> </span><span class="s">"DRY"</span><span class="p">,</span><span class="w"> </span><span class="s">"MID"</span><span class="p">,</span><span class="w"> </span><span class="s">"WET"</span><span class="p">,</span><span class="w"> </span><span class="s">"WET"</span><span class="p">);</span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="p">}</span>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">value_1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">moisture_1</span><span class="p">);</span>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">value_2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">moisture_2</span><span class="p">);</span>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="w">  </span><span class="n">rh1</span><span class="p">.</span><span class="n">updateNeedle</span><span class="p">((</span><span class="mi">100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value_1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10.24</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="w">  </span><span class="n">rh2</span><span class="p">.</span><span class="n">updateNeedle</span><span class="p">((</span><span class="mi">100</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value_2</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10.24</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">20</span><span class="p">);</span>
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="explaination-of-the-demo-code">Explaination of the demo code</h3>
+<p>This code snippet is written in C++ and is designed to be used with an Arduino board and a TFT (Thin Film Transistor) display. </p>
+<p>Here's an explanation of what the code does:</p>
+<ol>
+<li>
+<p><code>#include &lt;TFT_eSPI.h&gt;</code> and <code>#include &lt;TFT_eWidget.h&gt;</code>: These two lines include the necessary header files for the TFT display library and the widget library, which are used to control the display and create graphical elements like meters.</p>
+</li>
+<li>
+<p><code>#define moisture_1 A2</code> and <code>#define moisture_2 A1</code>: These lines define two analog input pins on the Arduino board, A2 and A1, which are used to read the soil moisture levels from two different sensors.</p>
+</li>
+<li>
+<p><code>TFT_eSPI tft = TFT_eSPI();</code>: This line creates an instance of the TFT display object, which is used to interact with the display.</p>
+</li>
+<li>
+<p><code>MeterWidget rh1 = MeterWidget(&amp;tft);</code> and <code>MeterWidget rh2 = MeterWidget(&amp;tft);</code>: These lines create two instances of the <code>MeterWidget</code> class, which represent analog meters that will be displayed on the TFT screen. The <code>&amp;tft</code> argument is a pointer to the TFT display object.</p>
+</li>
+<li>
+<p><code>void setup() { ... }</code>: This function is the setup function that runs once when the Arduino is powered on or reset. It initializes the serial communication, sets up the TFT display, and configures the parameters for the two analog meters.</p>
+</li>
+<li>
+<p><code>Serial.begin(115200);</code>: This line initializes the serial communication at a baud rate of 115200, which is used for debugging purposes.</p>
+</li>
+<li>
+<p><code>tft.begin();</code>: This line initializes the TFT display.</p>
+</li>
+<li>
+<p><code>tft.setRotation(0);</code>: This line sets the rotation of the display to 0 degrees, which is the default orientation.</p>
+</li>
+<li>
+<p><code>tft.fillScreen(TFT_WHITE);</code>: This line fills the screen with a white color.</p>
+</li>
+<li>
+<p><code>rh1.setZones(...)</code> and <code>rh2.setZones(...)</code>: These lines set the color zones for the meters, defining the colors for different ranges of the needle's position.</p>
+</li>
+<li>
+<p><code>rh1.analogMeter(...)</code> and <code>rh2.analogMeter(...)</code>: These lines configure the appearance and labels of the analog meters.</p>
+</li>
+<li>
+<p><code>void loop() { ... }</code>: This function is the main loop that runs continuously after the setup function. It reads the analog values from the moisture sensors, updates the needle position on the meters, and then waits for a short period before repeating.</p>
+</li>
+<li>
+<p><code>float value_1 = analogRead(moisture_1);</code> and <code>float value_2 = analogRead(moisture_2);</code>: These lines read the analog values from the two moisture sensors.</p>
+</li>
+<li>
+<p><code>rh1.updateNeedle(...)</code> and <code>rh2.updateNeedle(...)</code>: These lines update the position of the needle on each meter based on the analog values read from the sensors.</p>
+</li>
+<li>
+<p><code>delay(20);</code>: This line introduces a short delay to slow down the loop and prevent it from running too fast.</p>
+</li>
+</ol>
+<p>Overall, this code is part of a project that uses a TFT display to show the soil moisture levels from two sensors in a graphical form, with the needle of the meters moving based on the moisture levels.</p>
+<h3 id="upload-the-sketch-to-arduino-uno-r4-wifi-board">Upload the sketch to Arduino UNO R4 WiFi board.</h3>
+<ul>
+<li>
+<p>Connect the Arduino UNO R4 WiFi board to your computer via USB-C cable on USB port </p>
+</li>
+<li>
+<p>Select the serial device on your arduino IDE and click upload icon as following figure:</p>
+</li>
+</ul>
+<p><img alt="upload sketch" src="../imgs/upload_sketch_basic_5.png"> </p>
+<h3 id="observe-the-needle-on-tft-screen">Observe the needle on TFT screen.</h3>
+<ul>
+<li>You can see the CH1 on the first right corner, and if you place a wet paper or
+put the soil moisture sensor into water, the number will change and the needle
+    will spin on the meter. </li>
+</ul>
+<p><img alt="channel_info" src="../imgs/meter_information_of_moisture.jpg"></p>
+<h2 id="demo-code-sketch-download">Demo Code Sketch Download</h2>
+<ul>
+<li><a href="../imgs/Basic_6_TFT_display_moisture_sensor_data.zip">Basic_6_TFT_display_moisture_sensor_data</a></li>
+</ul>
+<h2 id="demo-video">Demo Video</h2>
+<p><div class="video-container"><iframe src="../imgs/TFT_meters_show.mp4" style="position:relative;width:100%;height:22.172vw" frameborder="0" allowfullscreen alt="type:video"></iframe></div></p>
+<hr>
+<h3 id="finally">Finally</h3>
+<ul>
+<li>Did you see that needle spinning when you put a wet paper on the soil moisutre
+sensor ? If you finished this task, you are going to build more complex
+experiment right now! </li>
+</ul>
+<p>Let us remove to next chapter!  </p></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../basic_usage_5/" class="btn btn-neutral float-left" title="Basic Usage 5"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../network_configuration/" class="btn btn-neutral float-right" title="Networking">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../basic_usage_5/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../network_configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

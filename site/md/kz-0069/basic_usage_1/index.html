@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Basic Usage 1 - 52Pi Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Basic Usage 1";
+        var mkdocs_page_input_path = "md/kz-0069/basic_usage_1.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 52Pi Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">HOME</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0086</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0086/diykitforarduinonanor4/">DIY Beginner Kit Compatible with Arduino Nano R4(Headers)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0083</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/getting-start/">Raspberry Pi Pico 2 WH Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project9/">Project 9</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0084</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0084/projects/">Ultimate Starter Kit for Raspberry Pi Pico 2 WH</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0054</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0054/whatinkit/">Cloud Ready Starter Kit for Arduino UNO R4 WiFi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0069</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../package_includes/">Plant Watering Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Basic Usage 1</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#blinking-led-on-board">Blinking LED on board</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hardware-overview">Hardware Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pinout-chart">Pinout Chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#circuit-diagram">Circuit Diagram</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#leds-on-board-position-detail">LEDs on board Position Detail</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-the-shield">Connecting the Shield</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#programming">Programming</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#define-led-pin-number">Define LED Pin number</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initializing-pin-mode">Initializing Pin Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#modify-loop-section">Modify loop section</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#upload-the-sketch-to-arduino-uno-r4-wifi-board">Upload the sketch to Arduino UNO R4 WiFi board.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo-code-sketch-download">Demo Code Sketch Download</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#finally">Finally</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_2/">Basic Usage 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_3/">Basic Usage 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_4/">Basic Usage 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_5/">Basic Usage 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_6/">Basic Usage 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../network_configuration/">Networking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mosquitto_mqtt_broker/">MQTT broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../home_assistant/">HomeAssistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arduino_cloud/">Arduino Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0073</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/whatinkit/">Education Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0077</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0077/student_starter_kit/">Student Starter Kit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0068</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/whatinkit/">Universal Sensor Kit(TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/">E-Mail</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">52Pi Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>KZ-0069 &raquo;</li>
+      <li>Basic Usage 1</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="basic-usage-1">Basic Usage 1</h1>
+<h2 id="blinking-led-on-board">Blinking LED on board</h2>
+<p>This is the basic experiment for learning the plant watering kit, it will help you to know about the pinout of electronics components onboard and help you understand how to use those components individual. </p>
+<p>OK, let’s begin the basic learning. </p>
+<p>In this experiment, we are going to blink the two LEDs on the plant watering hat board. </p>
+<h2 id="hardware-overview">Hardware Overview</h2>
+<p>The shield provides the following interfaces:</p>
+<ul>
+<li>3 x Soil Moisture Sensors (Analog Inputs A0, A1, A2)</li>
+<li>3 x NTC Temperature Sensors (Analog Inputs A4, A5, A6)</li>
+<li>3 x 3.3V Relay Modules (Digital Outputs 2, 3, 4)</li>
+<li>3 x Mini Water Pumps</li>
+<li>1.3-inch IPS RGB TFT Screen (ST7789 Controller)</li>
+</ul>
+<h2 id="pinout-chart">Pinout Chart</h2>
+<ul>
+<li>Details of the expansion board.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Plant Watering Kit Hat Board</th>
+<th align="center">Arduino UNO R4 WiFi Board</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><font color="Green">HUMI3 </font></td>
+<td align="center"><font color="green">A0</font></td>
+</tr>
+<tr>
+<td align="center"><font color="Green">HUMI2 </font></td>
+<td align="center"><font color="green">A1</font></td>
+</tr>
+<tr>
+<td align="center"><font color="Green">HUMI1 </font></td>
+<td align="center"><font color="green">A2</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP3</font></td>
+<td align="center"><font color="BROWN">A3</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP2</font></td>
+<td align="center"><font color="BROWN">A4</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP1 </font></td>
+<td align="center"><font color="BROWN">A5</font></td>
+</tr>
+<tr>
+<td align="center"><font color="red">IR_RSV</font></td>
+<td align="center"><font color="red">D5</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 1</font></td>
+<td align="center"><font color="blue">D2</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 2</font></td>
+<td align="center"><font color="blue">D3</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 3</font></td>
+<td align="center"><font color="blue">D4</font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_SCLK </font></td>
+<td align="center"><font color="pink">D13 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_MOSI</font></td>
+<td align="center"><font color="pink">D11 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_CS </font></td>
+<td align="center"><font color="pink">D10 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_DC </font></td>
+<td align="center"><font color="pink">D9 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_RST </font></td>
+<td align="center"><font color="pink">D8 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="red"> RX</font></td>
+<td align="center"><font color="red">TX-&gt;1 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="red"> TX</font></td>
+<td align="center"><font color="red">RX&lt;-0 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="green">Green LED </font></td>
+<td align="center"><font color="green">D6</font></td>
+</tr>
+<tr>
+<td align="center"><font color="red">Red LED</font></td>
+<td align="center"><font color="red">D7</font></td>
+</tr>
+</tbody>
+</table>
+<h2 id="circuit-diagram">Circuit Diagram</h2>
+<p><img alt="circuit Diagram" src="../imgs/plant_watering_kit_board_diagram.png"></p>
+<h2 id="leds-on-board-position-detail">LEDs on board Position Detail</h2>
+<p><img alt="ledpinout" src="../imgs/KZ-0069-bu1.jpg"></p>
+<h2 id="connecting-the-shield">Connecting the Shield</h2>
+<ul>
+<li>place the arduino uno r4 on a flat surface.</li>
+<li>align the shield with the headers of the arduino board and gently press it down until it clicks into place.</li>
+<li>plug the plant watering hat board on top of arduino uno r4 on gpio pins. </li>
+</ul>
+<h2 id="programming">Programming</h2>
+<p>Open arduino IDE and create a new sketch by clicking <code>file</code>-&gt; <code>New Sketch</code> </p>
+<p><img alt="new sketch" src="../imgs/pwk01.png"></p>
+<h3 id="define-led-pin-number">Define LED Pin number</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#define Green_LED 6</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#define Red_LED 7</span>
+</span></code></pre></div>
+<h3 id="initializing-pin-mode">Initializing Pin Mode</h3>
+<p>Set the pin direction to <code>OUTPUT</code> in setup function sector.</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">Green_LED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">pinMode</span><span class="p">(</span><span class="n">Red_LED</span><span class="p">,</span><span class="w"> </span><span class="n">OUTPUT</span><span class="p">);</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="modify-loop-section">Modify loop section</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">Green_LED</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">Red_LED</span><span class="p">,</span><span class="w"> </span><span class="n">HIGH</span><span class="p">);</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">Green_LED</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="n">digitalWrite</span><span class="p">(</span><span class="n">Red</span><span class="p">,</span><span class="w"> </span><span class="n">LOW</span><span class="p">);</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="n">delay</span><span class="p">(</span><span class="mi">500</span><span class="p">);</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<p>It will light up Red LED after Green_LED and wait for 500 milliseconds and then
+turn off the LEDs.</p>
+<h3 id="upload-the-sketch-to-arduino-uno-r4-wifi-board">Upload the sketch to Arduino UNO R4 WiFi board.</h3>
+<ul>
+<li>
+<p>Connect the Arduino UNO R4 WiFi board to your computer via USB-C cable on USB port </p>
+</li>
+<li>
+<p>Select the serial device on your arduino IDE and click upload icon as following figure:</p>
+</li>
+</ul>
+<p><img alt="upload sketch" src="../imgs/pwk02.png"> </p>
+<p>You may try to modify the code in loop section to change the behavior of the LED indicators. </p>
+<h2 id="demo-code-sketch-download">Demo Code Sketch Download</h2>
+<ul>
+<li><a href="../imgs/Basic_1_Blinking_LED_onboard.zip">Basic_1_Blinking_LED_onboard Sketch Download</a></li>
+</ul>
+<h3 id="finally">Finally</h3>
+<ul>
+<li>If you can see the LED lights are blinking means that you have finished this
+task. Let us remove to next chapter. </li>
+</ul></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../getting_start/" class="btn btn-neutral float-left" title="Getting Start"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../basic_usage_2/" class="btn btn-neutral float-right" title="Basic Usage 2">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../getting_start/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../basic_usage_2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

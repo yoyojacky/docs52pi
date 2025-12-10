@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Project 4 - 52Pi Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Project 4";
+        var mkdocs_page_input_path = "md/kz-0083/project4.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 52Pi Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">HOME</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0086</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0086/diykitforarduinonanor4/">DIY Beginner Kit Compatible with Arduino Nano R4(Headers)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0083</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../getting-start/">Raspberry Pi Pico 2 WH Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Project 4</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#potentiometer-introduction">Potentiometer Introduction</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#basic-structure-and-function">Basic Structure and Function</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#how-it-works">How It Works</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#applications">Applications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#types-of-potentiometers">Types of Potentiometers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-in-electronics-projects">Example in Electronics Projects</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cool-project-controlling-an-led-and-buzzer-with-a-potentiometer-and-an-s8050-transistor">Cool Project: Controlling an LED and Buzzer with a Potentiometer and an S8050 Transistor</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#hardware-requirements">Hardware Requirements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#wiring-diagram">Wiring Diagram</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo-code">Demo Code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#code-explanations">Code Explanations</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#role-of-the-s8050-transistor">Role of the S8050 Transistor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../project9/">Project 9</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0084</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0084/projects/">Ultimate Starter Kit for Raspberry Pi Pico 2 WH</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0054</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0054/whatinkit/">Cloud Ready Starter Kit for Arduino UNO R4 WiFi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0069</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/package_includes/">Plant Watering Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/getting_start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_1/">Basic Usage 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_2/">Basic Usage 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_3/">Basic Usage 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_4/">Basic Usage 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_5/">Basic Usage 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/basic_usage_6/">Basic Usage 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/network_configuration/">Networking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/mosquitto_mqtt_broker/">MQTT broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/home_assistant/">HomeAssistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0069/arduino_cloud/">Arduino Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0073</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/whatinkit/">Education Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0077</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0077/student_starter_kit/">Student Starter Kit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0068</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/whatinkit/">Universal Sensor Kit(TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/">E-Mail</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">52Pi Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>KZ-0083 &raquo;</li>
+      <li>Project 4</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="project-4-potentiometer">Project 4: Potentiometer</h1>
+<p>Let’s build a DJ Box by using those components.</p>
+<h2 id="potentiometer-introduction">Potentiometer Introduction</h2>
+<p>A potentiometer is a type of variable resistor, which means it can change its resistance value in a controlled manner. It is a three-terminal device commonly used to adjust electrical signals or control the flow of current in a circuit.</p>
+<h3 id="basic-structure-and-function">Basic Structure and Function</h3>
+<ol>
+<li><strong>Three Terminals:</strong></li>
+<li><strong>Two Fixed Terminals:</strong> These are connected to the power supply (e.g., VCC and GND).</li>
+<li><strong>One Wiper Terminal:</strong> This is the middle terminal, which provides the variable output voltage.</li>
+<li><strong>Mechanism:</strong></li>
+<li>The potentiometer consists of a resistive element (usually a strip of carbon or a coil of wire) and a wiper that slides along this element.</li>
+<li>By rotating the knob or adjusting the slider, the position of the wiper changes, altering the resistance between the wiper and the fixed terminals.</li>
+</ol>
+<h3 id="how-it-works">How It Works</h3>
+<ul>
+<li>When the wiper is at one end, the resistance between the wiper and that end is zero, and the resistance to the other end is maximum.</li>
+<li>As the wiper moves towards the other end, the resistance to the first end increases, while the resistance to the second end decreases.</li>
+<li>This change in resistance allows the potentiometer to vary the voltage at the wiper terminal relative to the fixed terminals.</li>
+</ul>
+<h3 id="applications">Applications</h3>
+<ol>
+<li><strong>Volume Control:</strong></li>
+<li>In audio equipment, potentiometers are used to adjust the volume by changing the resistance in the audio signal path.</li>
+<li><strong>Brightness Control:</strong></li>
+<li>In lighting systems, they can control the brightness of LEDs or other lights by adjusting the current flow.</li>
+<li><strong>Tuning Circuits:</strong></li>
+<li>In radio or other electronic devices, potentiometers are used to tune frequencies by adjusting the resistance in the circuit.</li>
+<li><strong>Sensor Applications:</strong></li>
+<li>Potentiometers can act as position sensors in mechanical systems, where the position of a slider or knob is converted into an electrical signal.</li>
+</ol>
+<h3 id="types-of-potentiometers">Types of Potentiometers</h3>
+<ol>
+<li><strong>Rotary Potentiometers:</strong></li>
+<li>These have a rotating knob and are the most common type. They are used in applications where a circular motion is suitable (e.g., volume controls).</li>
+<li><strong>Linear Potentiometers:</strong></li>
+<li>These have a sliding mechanism and are used in applications where linear motion is required (e.g., faders on mixing consoles).</li>
+<li><strong>Digital Potentiometers:</strong></li>
+<li>These are electronically controlled and can change resistance through digital signals. They are often used in microcontroller-based projects for precise control.</li>
+</ol>
+<h3 id="example-in-electronics-projects">Example in Electronics Projects</h3>
+<p>In the context of the Raspberry Pi Pico project mentioned earlier, a potentiometer is used to provide an analog voltage signal to the Pico's ADC (Analog-to-Digital Converter) input. By rotating the knob, the user can change the voltage at the wiper terminal, which is then read by the Pico and used to control the brightness of an LED or the pitch of a buzzer.</p>
+<h2 id="cool-project-controlling-an-led-and-buzzer-with-a-potentiometer-and-an-s8050-transistor">Cool Project: Controlling an LED and Buzzer with a Potentiometer and an S8050 Transistor</h2>
+<p>This code demonstrates how to control the brightness of an LED and the pitch of a buzzer using a potentiometer on a Raspberry Pi Pico 2W. The implementation involves using the potentiometer to adjust the PWM (Pulse Width Modulation) signal for the LED and to select different musical notes for the buzzer. Additionally, an S8050 transistor is used to amplify the current for the LED, ensuring it can operate at higher brightness levels.</p>
+<h3 id="hardware-requirements">Hardware Requirements</h3>
+<ul>
+<li>1 x Raspberry Pi Pico 2W board</li>
+<li>1 x Buzzer</li>
+<li>1 x LED indicator</li>
+<li>1 x 220-ohm Resistor</li>
+<li>1 x S8050 Transistor</li>
+<li>1 x Potentiometer</li>
+<li>9 x Male-to-male jumper wire</li>
+<li>1 x MicroUSB programming cable</li>
+</ul>
+<h3 id="wiring-diagram">Wiring Diagram</h3>
+<ol>
+<li><strong>Potentiometer:</strong></li>
+<li>The middle pin of the potentiometer is connected to GPIO 26 (ADC pin) on the Pico (Pico 2W for short).</li>
+<li>The other two pins are connected to 3.3V and GND, respectively.</li>
+<li><strong>Buzzer with S8050 Transistor:</strong></li>
+<li>The positive of the Buzzer is connected to the Emitter pin of the S8050 transistor.</li>
+<li>The collector Pin of the S8050 transistor is connected to 3.3V on Pico 2W.</li>
+<li>The base Pin of the S8050 transistor is connected to GPIO 13 (GP13).</li>
+<li>A 220Ω resistor is placed in series with the LED to limit the current through the LED.</li>
+<li><strong>LED:</strong></li>
+<li>The positive of the LED (Long leg) is connected to GPIO 14 (PWM pin) on the Pico through a 220-ohm resistor.</li>
+<li>The negative of the LED (Short leg) is connected to GND.</li>
+</ol>
+<p>Please see the following figure:</p>
+<p><img alt="figure1" src="../imgs/p401.png">
+<img alt="figure2" src="../imgs/p402.png">
+<img alt="figure3" src="../imgs/p403.png"></p>
+<h2 id="demo-code">Demo Code</h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">from</span> <span class="nn">machine</span> <span class="kn">import</span> <span class="n">ADC</span><span class="p">,</span> <span class="n">PWM</span><span class="p">,</span> <span class="n">Pin</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kn">import</span> <span class="nn">utime</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Initialize the potentiometer (connected to GPIO 26)</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">potentiometer</span> <span class="o">=</span> <span class="n">ADC</span><span class="p">(</span><span class="mi">26</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1"># Initialize the LED (connected to GPIO 15)</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="n">led_pwm</span> <span class="o">=</span> <span class="n">PWM</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1"># Set PWM frequency to 1000 Hz</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="n">led_pwm</span><span class="o">.</span><span class="n">freq</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>  
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1"># Initialize the buzzer (connected to GPIO 13)</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="n">buzzer_pwm</span> <span class="o">=</span> <span class="n">PWM</span><span class="p">(</span><span class="n">Pin</span><span class="p">(</span><span class="mi">13</span><span class="p">))</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="c1"># Define musical note frequencies </span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="n">notes</span> <span class="o">=</span> <span class="p">{</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="s2">"C4"</span><span class="p">:</span> <span class="mi">262</span><span class="p">,</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="s2">"D4"</span><span class="p">:</span> <span class="mi">294</span><span class="p">,</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="s2">"E4"</span><span class="p">:</span> <span class="mi">330</span><span class="p">,</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="s2">"F4"</span><span class="p">:</span> <span class="mi">349</span><span class="p">,</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="s2">"G4"</span><span class="p">:</span> <span class="mi">392</span><span class="p">,</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="s2">"A4"</span><span class="p">:</span> <span class="mi">440</span><span class="p">,</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="s2">"B4"</span><span class="p">:</span> <span class="mi">494</span><span class="p">,</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    <span class="s2">"C5"</span><span class="p">:</span> <span class="mi">523</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="c1"># Read the potentiometer value (range 0-65535)</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>    <span class="n">pot_value</span> <span class="o">=</span> <span class="n">potentiometer</span><span class="o">.</span><span class="n">read_u16</span><span class="p">()</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="c1"># Control the LED brightness</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    <span class="c1"># Use the potentiometer value to directly control LED brightness</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    <span class="n">led_pwm</span><span class="o">.</span><span class="n">duty_u16</span><span class="p">(</span><span class="n">pot_value</span><span class="p">)</span> 
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>    <span class="c1"># Map the potentiometer value to a musical note</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    <span class="c1"># Map the range 0-65535 to 0-7 (corresponding to the notes)</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    <span class="n">note_index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">pot_value</span> <span class="o">/</span> <span class="p">(</span><span class="mi">65536</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">notes</span><span class="p">)))</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>    <span class="n">note</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">notes</span><span class="o">.</span><span class="n">keys</span><span class="p">())[</span><span class="n">note_index</span><span class="p">]</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    <span class="c1"># Set the buzzer frequency </span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="n">buzzer_pwm</span><span class="o">.</span><span class="n">freq</span><span class="p">(</span><span class="n">notes</span><span class="p">[</span><span class="n">note</span><span class="p">])</span>  <span class="c1"># Set the buzzer frequency </span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>    <span class="n">buzzer_pwm</span><span class="o">.</span><span class="n">duty_u16</span><span class="p">(</span><span class="mi">32768</span><span class="p">)</span>    <span class="c1"># Set the buzzer duty cycle to 50%</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    <span class="n">utime</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.15</span><span class="p">)</span>             <span class="c1"># Sustain for 0.15 seconds</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>    <span class="n">buzzer_pwm</span><span class="o">.</span><span class="n">duty_u16</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>        <span class="c1"># Stop the buzzer sound</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>    <span class="n">utime</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>  <span class="c1"># Short delay</span>
+</span></code></pre></div>
+<hr>
+<h2 id="code-explanations">Code Explanations</h2>
+<ul>
+<li><strong>ADC Initialization</strong>: The potentiometer is connected to GPIO 26, which is configured as an ADC (Analog-to-Digital Converter) input. This allows the Pico to read the analog voltage from the potentiometer and convert it into a digital value.</li>
+<li><strong>PWM Initialization</strong>: The LED is connected to GPIO 15, and the buzzer is connected to GPIO 13. Both pins are configured for PWM output. The LED PWM frequency is set to 1000 Hz, which is a suitable frequency for controlling LED brightness without visible flickering.</li>
+<li><strong>Note Frequencies</strong>: A dictionary <code>notes</code> is defined to store the frequencies of different musical notes. These frequencies will be used to control the pitch of the buzzer.</li>
+<li><strong>Reading the Potentiometer</strong>: The <code>potentiometer.read_u16()</code> function reads the analog value from the potentiometer, which ranges from 0 to 65535.</li>
+<li><strong>LED Brightness Control</strong>: The <code>led_pwm.duty_u16(pot_value)</code> function sets the PWM duty cycle for the LED. The duty cycle directly corresponds to the brightness of the LED. A higher value results in a brighter LED.</li>
+<li><strong>Mapping to Musical Notes</strong>: The potentiometer value is mapped to a musical note index. The range 0-65535 is divided into segments corresponding to the number of notes defined in the <code>notes</code> dictionary. The selected note is then used to set the frequency of the buzzer.</li>
+<li><strong>Buzzer Control</strong>: The <code>buzzer_pwm.freq(notes[note])</code> function sets the frequency of the buzzer to the selected note. The buzzer is activated for 0.15 seconds (<code>utime.sleep(0.15)</code>) and then turned off (<code>buzzer_pwm.duty_u16(0)</code>).</li>
+</ul>
+<hr>
+<h2 id="role-of-the-s8050-transistor">Role of the S8050 Transistor</h2>
+<p>The S8050 transistor is used to amplify the current for the LED. The GPIO pin (GPIO 15) provides a control signal to the base of the transistor, which allows a larger current to flow from the collector to the emitter. This configuration ensures that the LED can achieve higher brightness levels than would be possible with direct GPIO control alone.</p>
+<hr>
+<h2 id="conclusion">Conclusion</h2>
+<p>This code and circuit setup provide a simple yet effective way to control an LED's brightness and a buzzer's pitch using a potentiometer. The use of an S8050 transistor ensures that the LED can operate at higher brightness levels, while the PWM control allows precise adjustment of both the LED and the buzzer. This project is a great introduction to analog input, PWM control, and basic transistor amplification.</p></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../project3/" class="btn btn-neutral float-left" title="Project 3"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project5/" class="btn btn-neutral float-right" title="Project 5">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../project3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project5/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

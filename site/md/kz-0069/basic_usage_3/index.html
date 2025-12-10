@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Basic Usage 3 - 52Pi Docs</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Basic Usage 3";
+        var mkdocs_page_input_path = "md/kz-0069/basic_usage_3.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> 52Pi Docs
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">HOME</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0086</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0086/diykitforarduinonanor4/">DIY Beginner Kit Compatible with Arduino Nano R4(Headers)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0083</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/getting-start/">Raspberry Pi Pico 2 WH Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0083/project9/">Project 9</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0084</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0084/projects/">Ultimate Starter Kit for Raspberry Pi Pico 2 WH</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0054</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0054/whatinkit/">Cloud Ready Starter Kit for Arduino UNO R4 WiFi</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0069</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../package_includes/">Plant Watering Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../getting_start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_1/">Basic Usage 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_2/">Basic Usage 2</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Basic Usage 3</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#reading-ntc-raw-data-and-convert-it-into-temperature">Reading NTC raw data and convert it into temperature.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#hardware-overview">Hardware Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-ntc-temperature-sensor">What is NTC temperature sensor?</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#working-principle">Working Principle</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#applications">Applications</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#design-considerations">Design Considerations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#resistance-temperature-relationship">Resistance-Temperature Relationship</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sensitivity-and-b-value">Sensitivity and B Value</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#pinout-chart">Pinout Chart</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#circuit-diagram">Circuit Diagram</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ntc-thermistors-socket-position">NTC thermistors socket position</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#connecting-the-shield">Connecting the Shield</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#programming">Programming</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#import-header-files">Import Header files</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#define-ntc-thermistors-pin-number">Define NTC thermistors Pin number</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#define-function-for-ntc-formula">Define function for NTC formula</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#initializing-pin-mode">Initializing Pin Mode</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#modify-loop-section">Modify loop section</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#upload-the-sketch-to-arduino-uno-r4-wifi-board">Upload the sketch to Arduino UNO R4 WiFi board.</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#open-serial-monitor-and-observe-the-result">Open serial monitor and observe the result.</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#demo-code-sketch-download">Demo Code Sketch Download</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#finally">Finally</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_4/">Basic Usage 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_5/">Basic Usage 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic_usage_6/">Basic Usage 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../network_configuration/">Networking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../mosquitto_mqtt_broker/">MQTT broker</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../home_assistant/">HomeAssistant</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../arduino_cloud/">Arduino Cloud</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0073</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/whatinkit/">Education Starter Kit</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0073/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0077</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0077/student_starter_kit/">Student Starter Kit</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">KZ-0068</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/whatinkit/">Universal Sensor Kit(TBD)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/preparation/">Preparation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/getting-start/">Getting Start</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p1/">Project 1</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p2/">Project 2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p3/">Project 3</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p4/">Project 4</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p5/">Project 5</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p6/">Project 6</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p7/">Project 7</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p8/">Project 8</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p9/">Project 9</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../kz-0068/arduino/p10/">Project 10</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contact</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contact/">E-Mail</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">52Pi Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>KZ-0069 &raquo;</li>
+      <li>Basic Usage 3</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <div><h1 id="basic-usage-3">Basic Usage 3</h1>
+<h2 id="reading-ntc-raw-data-and-convert-it-into-temperature">Reading NTC raw data and convert it into temperature.</h2>
+<p>Next, we will calculate the current temperature information by converting the readings from the NTC.</p>
+<h2 id="hardware-overview">Hardware Overview</h2>
+<p>The shield provides the following interfaces:</p>
+<ul>
+<li>3 x Soil Moisture Sensors (Analog Inputs A0, A1, A2)</li>
+<li>3 x NTC Temperature Sensors (Analog Inputs A4, A5, A6)</li>
+<li>3 x 3.3V Relay Modules (Digital Outputs 2, 3, 4)</li>
+<li>3 x Mini Water Pumps</li>
+<li>1.3-inch IPS RGB TFT Screen (ST7789 Controller)</li>
+</ul>
+<h2 id="what-is-ntc-temperature-sensor">What is NTC temperature sensor?</h2>
+<p>NTC temperature sensors, which stand for <strong>Negative Temperature Coefficient</strong> thermistors, are a type of thermistor whose resistance decreases as the temperature increases. They are characterized by a negative correlation between resistance value and temperature within their operating range, meaning the resistance decreases with an increase in temperature.</p>
+<p><img alt="ntc thermistors" src="../imgs/ntc_sensor.jpg"></p>
+<h3 id="working-principle">Working Principle</h3>
+<p>The working principle of NTC thermistors is based on the properties of semiconductor materials. Unlike metals, whose resistance increases with temperature due to increased lattice vibrations, in semiconductors, the number of free electrons and holes increases with heat, which outweighs the reduction in their average speed. This results in a decrease in resistance with an increase in temperature. Additionally, the energy band gap in semiconductors allows electrons to move from the valence band to the conduction band when heated, enhancing conductivity and further decreasing resistance.</p>
+<h3 id="applications">Applications</h3>
+<p>NTC thermistors are widely used in household appliances for functions such as:</p>
+<ul>
+<li>Automatic gain adjustment</li>
+<li>Overload protection</li>
+<li>Temperature control</li>
+<li>Temperature compensation</li>
+<li>Voltage stabilization</li>
+</ul>
+<p>For example, in devices like air conditioners or smartphones, NTC thermistors can measure internal temperatures for control and protection of sensitive components.</p>
+<h3 id="design-considerations">Design Considerations</h3>
+<p>When designing an NTC temperature measurement system, consider:</p>
+<ul>
+<li>Selection of NTC thermistors</li>
+<li>Choice and configuration of ADCs (Analog-to-Digital Converters)</li>
+<li>Methods of using NTC thermistors for temperature measurement</li>
+</ul>
+<p>One can choose between current excitation or voltage excitation and dynamically adjust gain or excitation current based on the thermistor's signal level to optimize accuracy.</p>
+<h3 id="resistance-temperature-relationship">Resistance-Temperature Relationship</h3>
+<p>The relationship between the resistance value of an NTC thermistor and temperature is given by:</p>
+<p><img alt="ntcformula" src="../imgs/ntc_formula.png"></p>
+<p>Where:</p>
+<ul>
+<li>( R_t ) is the resistance at temperature ( T ) (Kelvin)</li>
+<li>( R_0 ) is the reference resistance at temperature ( T_0 )</li>
+<li>( B ) is the material constant</li>
+<li>( \exp ) is the exponential function</li>
+</ul>
+<h3 id="sensitivity-and-b-value">Sensitivity and B Value</h3>
+<p>The B value is a key parameter that determines the sensitivity of the thermistor to temperature changes. A higher B value indicates a faster rate of resistance change with temperature, increasing the sensor's sensitivity.</p>
+<h2 id="pinout-chart">Pinout Chart</h2>
+<ul>
+<li>Details of the expansion board.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">Plant Watering Kit Hat Board</th>
+<th align="center">Arduino UNO R4 WiFi Board</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><font color="Green">HUMI3 </font></td>
+<td align="center"><font color="green">A0</font></td>
+</tr>
+<tr>
+<td align="center"><font color="Green">HUMI2 </font></td>
+<td align="center"><font color="green">A1</font></td>
+</tr>
+<tr>
+<td align="center"><font color="Green">HUMI1 </font></td>
+<td align="center"><font color="green">A2</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP3</font></td>
+<td align="center"><font color="BROWN">A3</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP2</font></td>
+<td align="center"><font color="BROWN">A4</font></td>
+</tr>
+<tr>
+<td align="center"><font color="BROWN">TEMP1 </font></td>
+<td align="center"><font color="BROWN">A5</font></td>
+</tr>
+<tr>
+<td align="center"><font color="red">IR_RSV</font></td>
+<td align="center"><font color="red">D5</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 1</font></td>
+<td align="center"><font color="blue">D2</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 2</font></td>
+<td align="center"><font color="blue">D3</font></td>
+</tr>
+<tr>
+<td align="center"><font color="blue">Relay 3</font></td>
+<td align="center"><font color="blue">D4</font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_SCLK </font></td>
+<td align="center"><font color="pink">D13 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_MOSI</font></td>
+<td align="center"><font color="pink">D11 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_CS </font></td>
+<td align="center"><font color="pink">D10 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_DC </font></td>
+<td align="center"><font color="pink">D9 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="pink"> TFT_RST </font></td>
+<td align="center"><font color="pink">D8 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="red"> RX</font></td>
+<td align="center"><font color="red">TX-&gt;1 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="red"> TX</font></td>
+<td align="center"><font color="red">RX&lt;-0 </font></td>
+</tr>
+<tr>
+<td align="center"><font color="green">Green LED </font></td>
+<td align="center"><font color="green">D6</font></td>
+</tr>
+<tr>
+<td align="center"><font color="red">Red LED</font></td>
+<td align="center"><font color="red">D7</font></td>
+</tr>
+</tbody>
+</table>
+<h2 id="circuit-diagram">Circuit Diagram</h2>
+<p><img alt="circuit Diagram" src="../imgs/plant_watering_kit_board_diagram.png"></p>
+<h2 id="ntc-thermistors-socket-position">NTC thermistors socket position</h2>
+<p><img alt="ntcthermistors" src="../imgs/NTC-snesors.jpg"></p>
+<h2 id="connecting-the-shield">Connecting the Shield</h2>
+<ul>
+<li>place the arduino uno r4 on a flat surface.</li>
+<li>align the shield with the headers of the arduino board and gently press it down until it clicks into place.</li>
+<li>plug the plant watering hat board on top of arduino uno r4 on gpio pins. </li>
+</ul>
+<h2 id="programming">Programming</h2>
+<p>Open arduino IDE and create a new sketch by clicking <code>file</code>-&gt; <code>New Sketch</code> </p>
+<p><img alt="new sketch" src="../imgs/pwk01.png"></p>
+<h3 id="import-header-files">Import Header files</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Math.h&gt;</span><span class="c1">         // import Math library</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span><span class="c1">         // import vector library</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string.h&gt;</span>
+</span></code></pre></div>
+<h3 id="define-ntc-thermistors-pin-number">Define NTC thermistors Pin number</h3>
+<ul>
+<li>The pins and the sensors are limited by the circuit on arduino Hat board.</li>
+<li>Please refer to <code>Pinout Chart</code> section.</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#define TEMP3 A3</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cp">#define TEMP2 A4</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cp">#define TEMP1 A5</span>
+</span></code></pre></div>
+<h3 id="define-function-for-ntc-formula">Define function for NTC formula</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// setting a structure to store tempvalue and index information</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">struct</span><span class="w"> </span><span class="nc">TempValue</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="kt">size_t</span><span class="w"> </span><span class="n">index</span><span class="p">;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">};</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="c1">// here stored the temp_table of the temperatue -&gt; resistor table and it has been convert to ADC reading range from 0-1023.</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1">// check the table of NTC 10K resister table and convert it to adc reading range by following formula</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="c1">//  resister number / (resister number + 10000.0)</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="c1">// for example:  when temperatrue is 25 degree, the NTC's resistor number is 10000.0 ohm, so the adc number will be:</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">//  10000.0 / (10000.0 + 10000.0) = 512, so, if you reading from adc and get 512 +/- 10 equals 25 degree.</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1">// dut to the NTC dose not a linear component, so you need to check the table to grab the temperature value.</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">temp_table</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="mi">994</span><span class="p">,</span><span class="w"> </span><span class="mi">992</span><span class="p">,</span><span class="w"> </span><span class="mi">990</span><span class="p">,</span><span class="w"> </span><span class="mi">988</span><span class="p">,</span><span class="w"> </span><span class="mi">986</span><span class="p">,</span><span class="w"> </span><span class="mi">983</span><span class="p">,</span><span class="w"> </span><span class="mi">981</span><span class="p">,</span><span class="w"> </span><span class="mi">978</span><span class="p">,</span><span class="w"> </span><span class="mi">975</span><span class="p">,</span><span class="w"> </span><span class="mi">972</span><span class="p">,</span><span class="w"> </span><span class="mi">969</span><span class="p">,</span><span class="w"> </span><span class="mi">966</span><span class="p">,</span><span class="w"> </span><span class="mi">962</span><span class="p">,</span><span class="w"> </span><span class="mi">959</span><span class="p">,</span><span class="w"> </span><span class="mi">955</span><span class="p">,</span><span class="w"> </span><span class="mi">951</span><span class="p">,</span><span class="w"> </span><span class="mi">947</span><span class="p">,</span><span class="w"> </span><span class="mi">943</span><span class="p">,</span><span class="w"> </span><span class="mi">938</span><span class="p">,</span><span class="w"> </span><span class="mi">933</span><span class="p">,</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="mi">928</span><span class="p">,</span><span class="w"> </span><span class="mi">923</span><span class="p">,</span><span class="w"> </span><span class="mi">918</span><span class="p">,</span><span class="w"> </span><span class="mi">912</span><span class="p">,</span><span class="w"> </span><span class="mi">907</span><span class="p">,</span><span class="w"> </span><span class="mi">901</span><span class="p">,</span><span class="w"> </span><span class="mi">894</span><span class="p">,</span><span class="w"> </span><span class="mi">888</span><span class="p">,</span><span class="w"> </span><span class="mi">881</span><span class="p">,</span><span class="w"> </span><span class="mi">874</span><span class="p">,</span><span class="w"> </span><span class="mi">867</span><span class="p">,</span><span class="w"> </span><span class="mi">860</span><span class="p">,</span><span class="w"> </span><span class="mi">852</span><span class="p">,</span><span class="w"> </span><span class="mi">845</span><span class="p">,</span><span class="w"> </span><span class="mi">837</span><span class="p">,</span><span class="w"> </span><span class="mi">828</span><span class="p">,</span><span class="w"> </span><span class="mi">820</span><span class="p">,</span><span class="w"> </span><span class="mi">811</span><span class="p">,</span><span class="w"> </span><span class="mi">802</span><span class="p">,</span><span class="w"> </span><span class="mi">793</span><span class="p">,</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="mi">784</span><span class="p">,</span><span class="w"> </span><span class="mi">774</span><span class="p">,</span><span class="w"> </span><span class="mi">765</span><span class="p">,</span><span class="w"> </span><span class="mi">755</span><span class="p">,</span><span class="w"> </span><span class="mi">745</span><span class="p">,</span><span class="w"> </span><span class="mi">735</span><span class="p">,</span><span class="w"> </span><span class="mi">724</span><span class="p">,</span><span class="w"> </span><span class="mi">714</span><span class="p">,</span><span class="w"> </span><span class="mi">703</span><span class="p">,</span><span class="w"> </span><span class="mi">692</span><span class="p">,</span><span class="w"> </span><span class="mi">682</span><span class="p">,</span><span class="w"> </span><span class="mi">671</span><span class="p">,</span><span class="w"> </span><span class="mi">659</span><span class="p">,</span><span class="w"> </span><span class="mi">648</span><span class="p">,</span><span class="w"> </span><span class="mi">637</span><span class="p">,</span><span class="w"> </span><span class="mi">626</span><span class="p">,</span><span class="w"> </span><span class="mi">614</span><span class="p">,</span><span class="w"> </span><span class="mi">603</span><span class="p">,</span><span class="w"> </span><span class="mi">592</span><span class="p">,</span><span class="w"> </span><span class="mi">580</span><span class="p">,</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">  </span><span class="mi">569</span><span class="p">,</span><span class="w"> </span><span class="mi">557</span><span class="p">,</span><span class="w"> </span><span class="mi">546</span><span class="p">,</span><span class="w"> </span><span class="mi">535</span><span class="p">,</span><span class="w"> </span><span class="mi">523</span><span class="p">,</span><span class="w"> </span><span class="mi">512</span><span class="p">,</span><span class="w"> </span><span class="mi">501</span><span class="p">,</span><span class="w"> </span><span class="mi">490</span><span class="p">,</span><span class="w"> </span><span class="mi">479</span><span class="p">,</span><span class="w"> </span><span class="mi">468</span><span class="p">,</span><span class="w"> </span><span class="mi">457</span><span class="p">,</span><span class="w"> </span><span class="mi">446</span><span class="p">,</span><span class="w"> </span><span class="mi">436</span><span class="p">,</span><span class="w"> </span><span class="mi">425</span><span class="p">,</span><span class="w"> </span><span class="mi">415</span><span class="p">,</span><span class="w"> </span><span class="mi">405</span><span class="p">,</span><span class="w"> </span><span class="mi">395</span><span class="p">,</span><span class="w"> </span><span class="mi">385</span><span class="p">,</span><span class="w"> </span><span class="mi">375</span><span class="p">,</span><span class="w"> </span><span class="mi">365</span><span class="p">,</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">  </span><span class="mi">356</span><span class="p">,</span><span class="w"> </span><span class="mi">347</span><span class="p">,</span><span class="w"> </span><span class="mi">338</span><span class="p">,</span><span class="w"> </span><span class="mi">329</span><span class="p">,</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">311</span><span class="p">,</span><span class="w"> </span><span class="mi">303</span><span class="p">,</span><span class="w"> </span><span class="mi">295</span><span class="p">,</span><span class="w"> </span><span class="mi">287</span><span class="p">,</span><span class="w"> </span><span class="mi">279</span><span class="p">,</span><span class="w"> </span><span class="mi">271</span><span class="p">,</span><span class="w"> </span><span class="mi">264</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="w"> </span><span class="mi">249</span><span class="p">,</span><span class="w"> </span><span class="mi">242</span><span class="p">,</span><span class="w"> </span><span class="mi">235</span><span class="p">,</span><span class="w"> </span><span class="mi">229</span><span class="p">,</span><span class="w"> </span><span class="mi">222</span><span class="p">,</span><span class="w"> </span><span class="mi">216</span><span class="p">,</span><span class="w"> </span><span class="mi">210</span><span class="p">,</span>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">  </span><span class="mi">204</span><span class="p">,</span><span class="w"> </span><span class="mi">198</span><span class="p">,</span><span class="w"> </span><span class="mi">193</span><span class="p">,</span><span class="w"> </span><span class="mi">187</span><span class="p">,</span><span class="w"> </span><span class="mi">182</span><span class="p">,</span><span class="w"> </span><span class="mi">176</span><span class="p">,</span><span class="w"> </span><span class="mi">172</span><span class="p">,</span><span class="w"> </span><span class="mi">167</span><span class="p">,</span><span class="w"> </span><span class="mi">162</span><span class="p">,</span><span class="w"> </span><span class="mi">157</span><span class="p">,</span><span class="w"> </span><span class="mi">153</span><span class="p">,</span><span class="w"> </span><span class="mi">148</span><span class="p">,</span><span class="w"> </span><span class="mi">144</span><span class="p">,</span><span class="w"> </span><span class="mi">140</span><span class="p">,</span><span class="w"> </span><span class="mi">136</span><span class="p">,</span><span class="w"> </span><span class="mi">132</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">125</span><span class="p">,</span><span class="w"> </span><span class="mi">121</span><span class="p">,</span><span class="w"> </span><span class="mi">118</span><span class="p">,</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">  </span><span class="mi">114</span><span class="p">,</span><span class="w"> </span><span class="mi">111</span><span class="p">,</span><span class="w"> </span><span class="mi">108</span><span class="p">,</span><span class="w"> </span><span class="mi">105</span><span class="p">,</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span><span class="w"> </span><span class="mi">99</span><span class="p">,</span><span class="w"> </span><span class="mi">96</span><span class="p">,</span><span class="w"> </span><span class="mi">94</span><span class="p">,</span><span class="w"> </span><span class="mi">91</span><span class="p">,</span><span class="w"> </span><span class="mi">88</span><span class="p">,</span><span class="w"> </span><span class="mi">86</span><span class="p">,</span><span class="w"> </span><span class="mi">84</span><span class="p">,</span><span class="w"> </span><span class="mi">81</span><span class="p">,</span><span class="w"> </span><span class="mi">79</span><span class="p">,</span><span class="w"> </span><span class="mi">77</span><span class="p">,</span><span class="w"> </span><span class="mi">75</span><span class="p">,</span><span class="w"> </span><span class="mi">73</span><span class="p">,</span><span class="w"> </span><span class="mi">71</span><span class="p">,</span><span class="w"> </span><span class="mi">69</span><span class="p">,</span><span class="w"> </span><span class="mi">67</span><span class="p">,</span><span class="w"> </span><span class="mi">65</span><span class="p">,</span><span class="w"> </span><span class="mi">63</span><span class="p">,</span><span class="w"> </span><span class="mi">62</span><span class="p">,</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">  </span><span class="mi">58</span><span class="p">,</span><span class="w"> </span><span class="mi">57</span><span class="p">,</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span><span class="w"> </span><span class="mi">54</span><span class="p">,</span><span class="w"> </span><span class="mi">52</span><span class="p">,</span><span class="w"> </span><span class="mi">51</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="mi">48</span><span class="p">,</span><span class="w"> </span><span class="mi">47</span><span class="p">,</span><span class="w"> </span><span class="mi">46</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">44</span><span class="p">,</span><span class="w"> </span><span class="mi">43</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w"> </span><span class="mi">38</span><span class="p">,</span><span class="w"> </span><span class="mi">37</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="mi">36</span><span class="p">,</span><span class="w"> </span><span class="mi">35</span><span class="p">,</span><span class="w"> </span><span class="mi">34</span><span class="p">,</span><span class="w"> </span><span class="mi">33</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">  </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">29</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="mi">28</span><span class="p">,</span><span class="w"> </span><span class="mi">27</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">26</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="mi">24</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">22</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">21</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span><span class="p">,</span><span class="w"> </span><span class="mi">19</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="p">};</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="c1">// customize the abs value</span>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="kt">int</span><span class="w"> </span><span class="nf">custom_abs</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="o">-</span><span class="n">x</span><span class="p">;</span>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="p">}</span>
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="c1">// function  to check the temp_table by sending adc reading value.</span>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="n">TempValue</span><span class="w"> </span><span class="nf">closestNumber</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">temp_table</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">  </span><span class="n">TempValue</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">  </span><span class="n">result</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp_table</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">  </span><span class="n">result</span><span class="p">.</span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">min_diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">custom_abs</span><span class="p">(</span><span class="n">temp_table</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">temp_table</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">custom_abs</span><span class="p">(</span><span class="n">temp_table</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">value</span><span class="p">);</span>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">diff</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">min_diff</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">      </span><span class="n">min_diff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diff</span><span class="p">;</span>
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">temp_table</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">      </span><span class="n">result</span><span class="p">.</span><span class="n">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">  </span><span class="n">result</span><span class="p">.</span><span class="n">index</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">40</span><span class="p">;</span>
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">;</span>
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="initializing-pin-mode">Initializing Pin Mode</h3>
+<ul>
+<li>Initializing serial port for serial monitor.</li>
+</ul>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">setup</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">9600</span><span class="p">);</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="modify-loop-section">Modify loop section</h3>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">void</span><span class="w"> </span><span class="nf">loop</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">ntc_1_raw_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">TEMP1</span><span class="p">);</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">ntc_2_raw_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">TEMP2</span><span class="p">);</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">ntc_3_raw_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">analogRead</span><span class="p">(</span><span class="n">TEMP3</span><span class="p">);</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="n">TempValue</span><span class="w"> </span><span class="n">ntc_1_temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">closestNumber</span><span class="p">(</span><span class="n">temp_table</span><span class="p">,</span><span class="w"> </span><span class="n">ntc_1_raw_data</span><span class="p">);</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="n">TempValue</span><span class="w"> </span><span class="n">ntc_2_temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">closestNumber</span><span class="p">(</span><span class="n">temp_table</span><span class="p">,</span><span class="w"> </span><span class="n">ntc_2_raw_data</span><span class="p">);</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">TempValue</span><span class="w"> </span><span class="n">ntc_3_temp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">closestNumber</span><span class="p">(</span><span class="n">temp_table</span><span class="p">,</span><span class="w"> </span><span class="n">ntc_3_raw_data</span><span class="p">);</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"Temperature of NTC thermistors:"</span><span class="p">);</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">NTC1: "</span><span class="p">);</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">ntc_1_temp</span><span class="p">.</span><span class="n">index</span><span class="p">);</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">NTC2: "</span><span class="p">);</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">ntc_2_temp</span><span class="p">.</span><span class="n">index</span><span class="p">);</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">"</span><span class="se">\t</span><span class="s">NTC3: "</span><span class="p">);</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">    </span><span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">ntc_3_temp</span><span class="p">.</span><span class="n">index</span><span class="p">);</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">    </span><span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span><span class="w"> </span><span class="c1">// wait for a while.</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="upload-the-sketch-to-arduino-uno-r4-wifi-board">Upload the sketch to Arduino UNO R4 WiFi board.</h3>
+<ul>
+<li>
+<p>Connect the Arduino UNO R4 WiFi board to your computer via USB-C cable on USB port </p>
+</li>
+<li>
+<p>Select the serial device on your arduino IDE and click upload icon as following figure:</p>
+</li>
+</ul>
+<p><img alt="upload sketch" src="../imgs/upload_sketch_bu3.png"> </p>
+<h3 id="open-serial-monitor-and-observe-the-result">Open serial monitor and observe the result.</h3>
+<p><img alt="openserialmonitor" src="../imgs/open_serial_monitor.png"></p>
+<p><img alt="feedback" src="../imgs/ntc_feedback.png"></p>
+<h2 id="demo-code-sketch-download">Demo Code Sketch Download</h2>
+<ul>
+<li><a href="../imgs/Basic_3_reading_NTC_raw_data_convert_to_temperature.zip">Basic_3_reading_NTC_raw_data_convert_to_temperature</a></li>
+</ul>
+<h3 id="finally">Finally</h3>
+<p>Congratulations! </p>
+<ul>
+<li>If you can see the temperature of the NTC thermistors have shown on the serial
+monitor's output, you can hold one of the NTC thermistor sensor and observe the
+temperature of it. if the data changed when you hold it, it means that you have
+finished the tast in this section, please move on to next chapter!</li>
+</ul></div>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../basic_usage_2/" class="btn btn-neutral float-left" title="Basic Usage 2"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../basic_usage_4/" class="btn btn-neutral float-right" title="Basic Usage 4">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../basic_usage_2/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../basic_usage_4/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../../..';</script>
+    <script src="../../../js/theme_extra.js" defer></script>
+    <script src="../../../js/theme.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

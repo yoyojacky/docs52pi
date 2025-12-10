@@ -1,6 +1,8 @@
 site_name: 52Pi Docs 
 nav:
   - HOME: 'index.md'
+  - KZ-0086:
+    - DIY Beginner Kit Compatible with Arduino Nano R4(Headers): 'md/kz-0086/diykitforarduinonanor4.md' 
   - KZ-0083:
     - Raspberry Pi Pico 2 WH Starter Kit: 'md/kz-0083/getting-start.md' 
     - Project 1: 'md/kz-0083/project1.md'
