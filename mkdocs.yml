@@ -1,6 +1,14 @@
 site_name: 52Pi Docs 
 nav:
   - HOME: 'index.md'
+  - EP-0263:
+    - RGB LED Matrix Shield for Arduino NANO R4/ESP32: 'md/ep-0263/ep-0263.md'
+  - EP-0262:
+    - Terminal Expansion Base for Arduino NANO ESP32 : 'md/ep-0262/ep-0262.md'
+  - EP-0257:
+    - Level-Shift Shield for Arduino UNO Q: 'md/ep-0257/ep-0257.md'
+  - KZ-0087:
+    - RGB LED Matrix Nano R4 Kit: 'md/kz-0087/RGBLED-matrix-kit.md'
   - KZ-0086:
     - DIY Beginner Kit Compatible with Arduino Nano R4(Headers): 'md/kz-0086/diykitforarduinonanor4.md' 
   - KZ-0083:
